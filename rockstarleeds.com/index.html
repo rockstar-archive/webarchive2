@@ -1,0 +1,590 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<!--rockstararchive script-->
+<script type="text/javascript" src="https://rockstar-archive.h0rizon.dev/webarchive/js/rgPatcher.js"></script>
+<!--rockstararchive script-->
+	<title>Rockstar Leeds</title>
+	<script src="js/api.js" type="text/javascript"></script>
+	<script>
+		var agt=navigator.userAgent.toLowerCase();
+		var appVer = navigator.appVersion.toLowerCase();
+		var is_macie = ((agt.indexOf('msie')!=-1)&&(agt.indexOf('mac')!=-1))?true:false;
+		var is_safari = ((agt.indexOf('safari')!=-1)&&(agt.indexOf('mac')!=-1))?true:false;
+		if(is_safari){
+			stilo="<style>ul, li{list-style: none;padding:0px;margin-left:0px;}</style>";
+		}else{
+			stilo="<style>ul, li{padding:0px;margin-left:0px;}</style>";
+		}
+		document.write(stilo);
+	</script>
+	<style>
+		HTML {
+		   overflow-y: scroll;
+		   overflow: -moz-scrollbars-vertical;
+		}
+		body,p,li{
+			background-color:#ffffff;
+			margin:0px;
+			padding:0px;
+			cursor:auto;
+			font-family:arial, helvetica, sans-serif;
+			font-weight:normal;
+			font-size:12px;
+			color:#000000;
+		}
+
+		#masterleeds{
+			background-image:url('img/vert_border.gif');
+			background-repeat:repeat-y;
+			width:700px;
+			/*padding-top:75px;*/
+			overflow:hidden;
+		}
+		.txt{
+			width:580px;
+			font-family:arial, helvetica, sans-serif;
+			font-weight:normal;
+			font-size:12px;
+			color:#000000;
+		}
+		#hdrjobs{
+			background-color:#005da9;
+			width:589px;
+			padding-bottom:10px;
+			font-family:arial, helvetica, sans-serif;
+			font-weight:normal;
+			font-size:12px;
+			color:#ffffff;
+			overflow:hidden;
+		}
+		img.pointerhand{
+			cursor: hand;
+			cursor: pointer;
+		}
+		a:link,a:active,a:visited{
+			text-decoration:underline;
+			font-weight:bold;
+			font-size:12px;
+			color:#000000;
+		}
+
+		a:hover{
+			text-decoration:underline;
+			font-weight:bold;
+			font-size:12px;
+			color:#000000;
+		}
+
+		a.jlink:link,a.jlink:active,a.jlink:visited{
+			text-decoration:underline;
+			font-weight:bold;
+			font-size:12px;
+			color:#ffffff;
+		}
+
+		a.jlink:hover{
+			text-decoration:underline;
+			font-weight:bold;
+			font-size:12px;
+			color:#ffffff;
+		}
+		.navBlock{
+			width:150px;
+			height:25px;
+			border:1px solid #ffffff;
+			padding:0px;
+			overflow:hidden;
+		}
+		.navBlock:focus{
+			background-color:#ffffff;
+		}
+	</style>
+	<script>
+		var prevMNav=1;
+		var currMNav=0;
+		var oms=0;
+		function togMNav(dasObj){
+			//swap src
+			prevMNav=currMNav;
+			currMNav.src=currMNav.id;
+
+			currMNav=dasObj;
+			currMNav.src=dasObj.src;
+
+			//swap mouseover/mouseout
+			prevMNav.onmouseout=oms;
+			oms=dasObj.onmouseout;
+			dasObj.onmouseout='';
+
+			if(prevMNav == currMNav){
+				dasObj.onmouseout=oms;
+				currMNav=0;
+			}
+		}
+
+		var prevGNav=1;
+		var currGNav=0;
+		var goms=0;
+		function togGNav(dasObj2){
+			//swap src
+			prevGNav=currGNav;
+			currGNav.src=currGNav.id;
+
+			currGNav=dasObj2;
+			currGNav.src=dasObj2.src;
+
+			//swap mouseover/mouseout
+			prevGNav.onmouseout=goms;
+			goms=dasObj2.onmouseout;
+			dasObj2.onmouseout='';
+
+			if(prevGNav == currGNav){
+				dasObj2.onmouseout=goms;
+				currGNav=0;
+			}
+		}
+
+		currSubNav="";
+		currSubNav2="";
+		function togSubNav(dasSubObj){
+			currSubNav.display = 'none';
+
+			if(currSubNav==dasSubObj){
+				currSubNav="";
+			}else{
+				currSubNav=dasSubObj;
+				currSubNav.display = '';
+			}
+
+			//turn off selected Game if leaving this section
+			currSubNav2.display = 'none';
+			togGNav(0);
+		}
+		function togSubNav2(dasSubObj){
+			/*if(dasSubObj.display){
+				dasSubObj.display = '';
+			}else{
+				dasSubObj.display = 'none';
+			}
+			*/
+
+			currSubNav2.display = 'none';
+
+			if(currSubNav2==dasSubObj){
+				currSubNav2="";
+			}else{
+				currSubNav2=dasSubObj;
+				currSubNav2.display = '';
+			}
+		}
+
+
+		function togJNav(currJNav,jTitle){
+			prevJNav.display = 'none';
+			currJNav.display = '';
+			prevJNav=currJNav;
+
+			jobmail.href="mailto:jobs@rockstarleeds.com?subject="+jTitle;
+		}
+
+		function getObj(obj){
+			compLayr = document.getElementById(obj).style
+			return compLayr
+		}
+
+		function jumpit(){
+			ml=getObj('masterleeds');
+			ml.display = '';
+			il=getObj('introleeds');
+			il.display = 'none';
+
+		}
+		//window.onload=init;
+	</script>
+
+</head>
+
+<body>
+<div align="center">
+	<script>
+		if(is_macie){
+			document.write("<div style='color:#005da9;font-size:10px;'>BOO ! You are using IE on the Mac. This site should not be viewed in IE since it does funky things like jump to the left after the flash intro. So please use the perfectly good browser that your Apple ships with called Safari. Or our favorite cross-platform browser, Firefox.</div>");
+		}
+	</script>
+	<img src="img/white_block.gif" width="1" height="15" alt=""><br>
+	<div id="masterleeds" style="display:none;"><div align="center">
+		<div id="dtop"><img src="img/default_top.gif" alt="" width="700" height="500" border="0"></div>
+
+		<!-- MAIN NAV -->
+		<div id="dnav" style="padding-left:0px;">
+
+        <img id="img/def_nav_home.gif" src="img/def_nav_home.gif" width="193" height="59" alt="" class="pointerhand" onClick="togMNav(this);togSubNav(document.getElementById('dnav1').style);" onMouseOver="this.src='img/def_nav_home_on.gif';" onMouseOut="this.src='img/def_nav_home.gif';">
+        <img id="img/def_nav_games.gif" src="img/def_nav_games.gif" width="232" height="59" alt="" class="pointerhand" onClick="togMNav(this);togSubNav(document.getElementById('dnav2').style)" onMouseOver="this.src='img/def_nav_games_on.gif';" onMouseOut="this.src='img/def_nav_games.gif';">
+        <img id="img/def_nav_jobs.gif" src="img/def_nav_jobs.gif" width="157" height="59" alt="" class="pointerhand" onClick="togMNav(this);togSubNav(document.getElementById('dnav3').style)" onMouseOver="this.src='img/def_nav_jobs_on.gif';" onMouseOut="this.src='img/def_nav_jobs.gif';">
+        </div>
+
+		<!-- HOME -->
+		<div id="dnav1" style="display:none;">
+        <div style="padding-left:2px;">
+        <img src="img/content_stars.gif" alt="" width="588" height="70" border="0">
+
+        </div>
+			<div id="cHome" style="padding-left:4px;">
+            <img src="img/content_home.gif" width="580" height="350" border="0">
+            <img src="img/content_home1_neu2.gif" width="580" height="208" border="0">
+            <br><br><br>
+			<img src="img/content_home2.gif" width="580" height="87" border="0" alt="" usemap="#mailtoBtn" id="mBtn" name="mBtn">
+            <br>
+		  <img src="img/content_home3.gif" width="580" height="167" alt="">
+          <br>
+
+          <div align="left" style="padding-left:58px;">
+          <a href="javascript:window.open('legal.html','Legal','width=543,height=460');void(0);">
+          <img src="img/content_home_legal.gif" border="0" id="legalBtn" name="legalBtn" onMouseOver="legalBtn.src='img/content_home_legal_on.gif';" onMouseOut="legalBtn.src='img/content_home_legal.gif';">
+          </a>
+          </div>
+          <br>&nbsp;</div>
+			<map name="mailtoBtn"><area alt="" coords="171,25,437,48" href="mailto:info@rockstarleeds.com" onMouseOver="mBtn.src='img/content_home2_on.gif';" onMouseOut="mBtn.src='img/content_home2.gif';"></map>
+
+		</div>
+
+		<!-- GAMES -->
+		<div id="dnav2" style="display:none;"><div style="padding-left:2px;"><img src="img/content_stars.gif" alt="" width="588" height="70" border="0"></div>
+			<!-- CTW -->
+			<img id="img/nav_game_ctw.gif" src="img/nav_game_ctw.gif" width="588" height="111" alt="" class="pointerhand" onClick="togGNav(this);togSubNav2(document.getElementById('dsubCTW').style);" onMouseOver="this.src='img/nav_game_ctw_on.gif';" onMouseOut="this.src='img/nav_game_ctw.gif';"><br>
+			<div id="dsubCTW" style="display:none;"><a href="http://www.rockstargames.com/chinatownwars/" target="_blank"><img src="img/logo_ctw_neu.gif" alt="" border="0"></a>
+			<div class="txt"><b>Grand Theft Auto: Chinatown Wars (DS&trade;)</b><br>
+				<i>"How does Rockstar follow Grand Theft Auto IV? By rebuilding Liberty City from the ground up on DS - and not compromising its vision one iota."</i> - Edge
+				<br><br>
+
+				Grand Theft Auto: Chinatown Wars is an entirely original entry into the critically acclaimed Grand Theft Auto series, and brings a new level of interactivity to its sprawling open environments. With the use of the DS touch screen, players will navigate their way through the streets as they uncover the truth behind an epic tale of crime and corruption within the Triad crime syndicate, delivering the unprecedented amount of depth that has become a true trademark of the franchise.
+				<br><br>
+				Developed by Rockstar Leeds, in conjunction with series creators Rockstar North, Grand Theft Auto: Chinatown Wars will be available for the Nintendo DST on March 17 and 20, 2009 in North America and Europe, respectively.
+				<br><br>
+ESRB Rating Pending:  May contain content inappropriate for children. Visit www.esrb.org for rating information.
+				<br><br>
+				<a href="http://www.rockstargames.com/chinatownwars" target="_blank">www.rockstargames.com/chinatownwars</a>
+			</div>
+			<br>
+
+			&nbsp;</div>
+			<!-- BEATERATOR -->
+			<img id="img/nav_game_beaterator.gif" src="img/nav_game_beaterator.gif" width="588" height="78" alt="" class="pointerhand" onClick="togGNav(this);togSubNav2(document.getElementById('dsubBEAT').style);" onMouseOver="this.src='img/nav_game_beaterator_on.gif';" onMouseOut="this.src='img/nav_game_beaterator.gif';"><br>
+			<div id="dsubBEAT" style="display:none;"><a href="http://www.rockstargames.com/beaterator" target="_blank"><img src="img/logo_beaterator_neu.gif" alt="" border="0"></a>
+			<div class="txt"><b>Beaterator (PSP&reg; system)</b><br><br>
+
+Rockstar Games has teamed up with super-producer Timbaland to present Beaterator, coming soon for the PSP system.
+				<br><br>
+"Music has always been a hugely important part of everything we do here," said Sam Houser, Founder and Executive Producer of Rockstar Games. "Two years ago, we launched a web-based version of Beaterator on our own website and people really embraced it. That inspired us to build and create something very interactive and unique. Having Timbaland involved in the game is a real honor and only adds to our excitement about the title."				<br><br>
+
+"I've always been a huge fan of Rockstar and love playing their games," said Timbaland. "I'm thrilled to be partnering with them and making music for Beaterator. I cannot wait to get this in the hands of our fans!"				<br><br>
+Beaterator for the PSP system is both a powerful music mixer with robust beatmaking features, as well as a highly addictive collection of original music and rhythm games and challenge modes - all available in the palm of your hand. <br>
+<br>
+
+
+ESRB Rating Pending:  Visit www.esrb.org for rating information.
+				<br><br>
+				<a href="http://www.rockstargames.com/beaterator" target="_blank">www.rockstargames.com/beaterator</a>
+			</div>
+
+			&nbsp;</div>
+
+			<!-- MCLAREMIX -->
+			<img id="img/nav_game_mclaremix.gif" src="img/nav_game_mclaremix.gif" width="588" height="48" alt="" class="pointerhand" onClick="togGNav(this);togSubNav2(document.getElementById('dsubMCLAREMIX').style);" onMouseOver="this.src='img/nav_game_mclaremix_on.gif';" onMouseOut="this.src='img/nav_game_mclaremix.gif';"><br>
+			<div id="dsubMCLAREMIX" style="display:none;"><a href="http://www.rockstargames.com/midnightclubLA/remix/ " target="_blank"><img src="img/logo_mclaremix_neu.jpg" alt="" border="0"></a>
+			<div class="txt"><b>Midnight Club: L.A. Remix (PSP&reg;)</b><br>
+				<i>&ldquo;A pure shot of adrenaline to the heart of the PSP. You need this racer!&rdquo;</i>  - Games Master UK
+				<br><br>
+				The successor to the best-selling racing game of all time on the PSP&reg; (PlayStation&reg;Portable) system, Midnight Club L.A. Remix brings all the frenetic action of Midnight Club Los Angeles to<br>
+
+ the world of handheld gaming.
+				<br><br>
+Optimized for portable gameplay with quicker races and reduced load times, Midnight Club L.A. Remix lets you race at breakneck speeds through the streets of Los Angeles and Tokyo, with the signature open city environments that fans of the Midnight Club series have come to expect.				<br><br>
+Featuring the entire roster of licensed cars and bikes from Midnight Club Los Angeles; over 40 diverse vehicles spanning 5 unique classes, as well as in-depth car customization that includes body kits, paint styles, rims and vinyls - Midnight Club L.A. Remix is the definitive street racing <br>experience 
+for the PSP system.				<br><br>
+
+Developed by Rockstar London in conjunction with series creators Rockstar San Diego, Midnight Club L.A. Remix is now available exclusively for the PSP system.
+<br>
+<br>
+
+
+
+ESRB Rating: TEEN with Mild Suggestive Themes, Mild Violence, Strong Lyrics.
+
+				<br><br>
+
+				<a href="http://www.rockstargames.com/midnightclubLA/remix/ " target="_blank">http://www.rockstargames.com/midnightclubLA/remix</a>
+			</div>
+			<br>
+			<a href="http://www.rockstargames.com/midnightclubLA" target="_blank" style="text-decoration:none;"><img src="img/thumb_mclaremix_1.gif" alt="" border="0">
+			<img src="img/thumb_mclaremix_2.gif" alt="" border="0">
+			<img src="img/thumb_mclaremix_3.gif" alt="" border="0"></a>
+			&nbsp;</div>
+			<!-- TABLTEN -->
+
+			<img id="img/nav_game_tblten.gif" src="img/nav_game_tblten.gif" width="588" height="112" alt="" class="pointerhand" onClick="togGNav(this);togSubNav2(document.getElementById('dsubTBLTEN').style);" onMouseOver="this.src='img/nav_game_tblten_on.gif';" onMouseOut="this.src='img/nav_game_tblten.gif';"><br>
+			<div id="dsubTBLTEN" style="display:none;"><a href="http://www.rockstargames.com/tabletennis/" target="_blank"><img src="img/logo_tblten_neu.gif" alt="" border="0"></a>
+			<div class="txt"><b>Rockstar Games presents Table Tennis (Wii&trade;)</b><br>
+				<i>&ldquo;This is one incredibly fun title.&rdquo; </i> - Game Informer
+				<br><br>
+Rockstar Games presents Table Tennis for the Wii serves up addictive, head-to-head competitive fun for everyone.				<br><br>
+EASY TO PICK UP, DIFFICULT TO MASTER:<br>
+
+Three unique control schemes (Standard, Sharp Shooter, and Control Freak) for every level of <br>
+player, from the novice to the grandmaster.
+				<br><br>
+THE ULTIMATE SPORTS SIMULATION:<br>
+
+19 different arenas, 11 different players and 4 different game modes offer endless easy to test <br>
+your skills.
+				<br><br>
+                GET PHYSICAL:<br>
+
+The amazing use of the Wii's interactive controls takes the game to entirely new <br>
+
+pulse-pounding levels.
+<br>
+<br>
+
+
+
+ESRB Rating: EVERYONE
+
+				<br><br>
+				<a href="http://www.rockstargames.com/tabletennis/" target="_blank">http://www.rockstargames.com/tabletennis/</a>
+			</div>
+			<br>
+			<a href="http://www.rockstargames.com/tabletennis/" target="_blank" style="text-decoration:none;"><img src="img/thumb_tblten_1.gif" alt="" border="0">
+
+			<img src="img/thumb_tblten_2.gif" alt="" border="0">
+			<img src="img/thumb_tblten_3.gif" alt="" border="0"></a>
+			&nbsp;</div>
+
+			<!-- VCS -->
+			<img id="img/nav_games_vcs.gif" src="img/nav_games_vcs.gif" width="588" height="111" alt="" class="pointerhand" onClick="togGNav(this);togSubNav2(document.getElementById('dsub1').style);" onMouseOver="this.src='img/nav_games_vcs_on.gif';" onMouseOut="this.src='img/nav_games_vcs.gif';"><br>
+			<div id="dsub1" style="display:none;"><a href="http://www.rockstargames.com/vicecitystories/" target="_blank"><img src="img/logo_vcs_neu.gif" alt="" border="0"></a>
+			<div class="txt"><b>Grand Theft Auto: Vice City Stories (PSP&reg; and PlayStation&reg;2)</b><br>
+
+				<i>"If you have a PSP, you must buy this game; if you don't have a PSP, get one just to play this game"</i> - PSM
+				<br><br>
+				Vice City, 1984. Opportunity abounds in a city emerging from the swamps, its growth fueled by the violent power struggle in a lucrative drugs trade. Construction is everywhere as a shining metropolis rises from foundations of crime and betrayal.
+				<br><br>
+				As a soldier, Vic Vance has always protected his dysfunctional family, his country, himself. One bad decision later and that job is about to get much harder. Kicked out onto the streets of a city torn between glamour and gluttony, Vic is faced with a stark choice - build an empire or be crushed.
+				<br><br>
+				Developed by Rockstar Leeds and series creators Rockstar North, Grand Theft Auto: Vice City Stories is out now.
+				<br><br>
+
+				ESRB Rating: MATURE with Blood and Gore, Intense Violence, Strong Language, Strong Sexual Content, Use of Drugs
+
+				<br><br>
+
+				<a href="http://www.rockstargames.com/vicecitystories/" target="_blank">www.rockstargames.com/vicecitystories/</a>
+			</div>
+			<br>
+			<a href="http://www.rockstargames.com/vicecitystories" target="_blank" style="text-decoration:none;"><img src="img/thumb_vcs_1.gif" alt="" border="0">
+			<img src="img/thumb_vcs_2.gif" alt="" border="0">
+			<img src="img/thumb_vcs_3.gif" alt="" border="0"></a>
+			&nbsp;</div>
+
+			<!-- WARRIORS -->
+
+			<img id="img/nav_games_warr.gif" src="img/nav_games_warr.gif" alt="" class="pointerhand" onClick="togGNav(this);togSubNav2(document.getElementById('dsub1a').style);" onMouseOver="this.src='img/nav_games_warr_on.gif';" onMouseOut="this.src='img/nav_games_warr.gif';"><br>
+			<div id="dsub1a" style="display:none;"><br><a href="http://www.rockstargames.com/vicecitystories/" target="_blank"><img src="img/logo_warr.gif" alt="" border="0"></a><br><br>
+			<div class="txt"><b>The Warriors (PSP&reg;)</b><br>
+				<i>"If you're looking for a deep, brutal, high-quality PSP brawler with lots of variety and short load times, then you're not going to find one that's better than this."</i> - GamesRadar
+				<br><br>
+				Developed by Rockstar Leeds in conjunction with Rockstar Toronto, The Warriors is now also available for the PSP system.
+				<br><br>
+				"We set out to create a highly sophisticated portable game that delivers a visceral experience previously unseen on the PSP system," stated Sam Houser, Founder and Executive Producer of Rockstar Games. "We are looking forward to setting the definitive bar for the brawler genre on the PSP system by delivering an extremely stylish and exceptionally deep experience."
+				<br><br>
+
+				"We have worked closely with Rockstar Toronto to maintain the extremely high standards they've set for this game," said Gordon Hall, President of Rockstar Leeds. "The PSP system allows us to deliver the experience in an entirely different way, while staying very faithful to the original source material and maintaining the high standards we set for ourselves as a developer."
+				<br><br>
+				Based on the 1979 cult classic Paramount Pictures film, The Warriors expands the stylized cinematic journey of the film into a gritty, interactive experience set in 1970's New York City.
+				<br><br>
+
+				ESRB Rating: MATURE with Blood, Intense Violence, Sexual Themes, Strong Language, Use of Drugs and Alcohol
+
+				<br><br>
+				<a href="http://www.rockstargames.com/thewarriors/" target="_blank">www.rockstargames.com/thewarriors/</a>
+			</div>
+			&nbsp;</div>
+
+			<!-- LCS -->
+			<img id="img/nav_games_lcs.gif" src="img/nav_games_lcs.gif" width="588" height="104" alt="" class="pointerhand" onClick="togGNav(this);togSubNav2(document.getElementById('dsub2').style);" onMouseOver="this.src='img/nav_games_lcs_on.gif';" onMouseOut="this.src='img/nav_games_lcs.gif';"><br>
+			<div id="dsub2" style="display:none;"><a href="http://www.rockstargames.com/libertycitystories" target="_blank" style="text-decoration:none;"><img src="img/logo_lcs.gif" width="588" height="107" alt="" border="0"></a>
+			<div class="txt"><b>Grand Theft Auto: Liberty City Stories (PSP&reg; and PlayStation&reg;2)</b><br>
+				<i>"Grand Theft Auto: Liberty City Stories is the game the Sony PSP was made to play"</i> - The New York Times<br>
+
+				<br>
+				There are a million stories in Liberty City. This one changes everything. Once a trusted wise guy in the Leone crime family, Toni Cipriani was forced into hiding after killing a made man. Now he's back and it's time for things to be put right.
+				<br><br>
+				The streets of Liberty City are in turmoil. Warring mafiosi vie for control as the town begins to self-destruct under waves of political corruption, organized crime, drug trafficking and union strikes. No one can be trusted as Toni tries to clean up the mess of the city's chaotic underworld. Deranged hit men, morally depraved tycoons, cynical politicians and his own mother stand in his way as Toni tries to bring the city under Leone control.
+				<br><br>
+				Forced to fight for his life in an odyssey that will shake Liberty City to its foundations, Toni must use any means necessary to secure his place in the leadership of the Leone family in a town up for grabs.
+				<br><br>
+
+				ESRB Rating: MATURE with Blood and Gore, Intense Violence, Strong Language, Strong Sexual Content, Use of Drugs
+
+				<br><br>
+				<a href="http://www.rockstargames.com/libertycitystories" target="_blank">www.rockstargames.com/libertycitystories</a>
+
+			</div>
+			<br>
+			<a href="http://www.rockstargames.com/libertycitystories" target="_blank"><img src="img/thumb_lcs_1.gif" width="191" height="108" alt="" border="0">
+			<img src="img/thumb_lcs_2.gif" width="192" height="108" alt="" border="0">
+			<img src="img/thumb_lcs_3.gif" width="192" height="108" alt="" border="0"></a>
+			</div>
+
+			<!-- MC3 -->
+			<img id="img/nav_games_mc3.gif" src="img/nav_games_mc3.gif" width="588" height="137" alt="" class="pointerhand" onClick="togGNav(this);togSubNav2(document.getElementById('dsub3').style);" onMouseOver="this.src='img/nav_games_mc3_on.gif';" onMouseOut="this.src='img/nav_games_mc3.gif';"><br>
+
+			<div id="dsub3" style="display:none;"><a href="http://www.rockstargames.com/midnightclub3/" target="_blank"><img src="img/logo_mc3.gif" width="588" height="134" alt="" border="0"></a>
+			<div class="txt"><b>Midnight Club 3: DUB Edition (PSP&reg;)</b><br>
+				<i>"DUB Edition is the best racing title on the PSP"</i> - GAME INFORMER<br>
+				<br>
+				Rockstar Games has joined forces with DUB Magazine, the authoritative source on automotive lifestyles, to redefine the racing genre once again with Midnight Club 3: DUB Edition. The series that took racing from tracks to the open urban streets is back, and the stakes are even higher. Midnight Club 3: Dub Edition delivers insanely fast, open city racing in Atlanta, San Diego, and Detroit, complete with the most comprehensive vehicle customization ever seen in a video game. Drive the hottest licensed real life SUVs, import tuners, muscle cars, choppers and luxury rides, and trick them out with the latest rims, trims, and upgrades just like in the pages of DUB. Midnight Club 3: DUB Edition has more speed, more choices, and more chrome than any game has ever packed under the hood.
+				<br><br>
+
+				ESRB Rating: EVERYONE 10+ with Mild Language, Mild Violence
+
+				<br><br>
+				<a href="http://www.rockstargames.com/midnightclub3/" target="_blank">www.rockstargames.com/midnightclub3/</a>
+			</div>
+			<br>
+			<a href="http://www.rockstargames.com/midnightclub3" target="_blank" style="text-decoration:none;"><img src="img/thumb_mc3_1.gif" width="191" height="109" alt="" border="0">
+			<img src="img/thumb_mc3_2.gif" width="192" height="109" alt="" border="0">
+			<img src="img/thumb_mc3_3.gif" width="191" height="109" alt="" border="0"></a>
+			</div>
+
+			<!-- MP -->
+			<img id="img/nav_games_max.gif" src="img/nav_games_max.gif" width="588" height="90" alt="" class="pointerhand" onClick="togGNav(this);togSubNav2(document.getElementById('dsub4').style);" onMouseOver="this.src='img/nav_games_max_on.gif';" onMouseOut="this.src='img/nav_games_max.gif';">
+			<div id="dsub4" style="display:none;"><a href="http://www.rockstargames.com/maxpayne/gba/" target="_blank"><img src="img/logo_mp.gif" width="588" height="275" alt="" border="0"></a>
+			<div class="txt"><b>Max Payne (Game Boy Advance)</b><br>
+				<i>"Bullet-time is bitchin' on the Game Boy Advance."</i> - IGN<br>
+				<br>
+
+				Max Payne is a man with nothing to lose in the violent, cold urban night. A fugitive undercover cop framed for murder, and now hunted by cops and the mob. Max is a man with his back against the wall, fighting a battle he cannot hope to win. Prepare for a new breed of deep action game. Prepare for pain...
+				<br><br>
+				Max Payne is a relentless story-driven game about a man on the edge, fighting for his justice while uncovering plot-twists and twisted thugs in the gritty bowels of New York during the century's worst blizzard.
+				<br><br>
+				ESRB Rating: MATURE with Blood, Drug Reference, Violence
+				<br><br>
+				<a href="http://www.rockstargames.com/maxpayne/gba/" target="_blank">www.rockstargames.com/maxpayne/gba/</a>
+			</div>
+			<br>
+			<a href="http://www.rockstargames.com/maxpayne/gba/" target="_blank" style="text-decoration:none;"><img src="img/thumb_mp_1.gif" width="192" height="128" alt="" border="0">
+
+			<img src="img/thumb_mp_2.gif" width="192" height="128" alt="" border="0">
+			<img src="img/thumb_mp_3.gif" width="192" height="128" alt="" border="0"></a>
+			</div>
+		</div>
+
+		<!-- JOBS -->
+		<div id="dnav3" style="display:none;"><div style="padding-left:2px;"><img src="img/content_stars.gif" alt="" width="588" height="70" border="0"></div>
+		<!-- 005da9 -->
+			<div align="left"><div id="hdrjobs" style="margin-left:58px;"><img src="img/content_jobs.gif" alt="">
+
+
+			<div align="center"><div style="width:500px;"><a href="javascript:togJNav(document.getElementById('job1').style,'Environment Artist')" class="jlink">Environment Artist</a>  / <a href="javascript:togJNav(document.getElementById('job2').style,'Game Content Creator')" class="jlink">Game Content Creator</a>  / <a href="javascript:togJNav(document.getElementById('job3').style,'Game Programmer')" class="jlink">Game Programmer</a>  / <a href="javascript:togJNav(document.getElementById('job4').style,'Graphics Programmer')" class="jlink">Graphics Programmer</a> </div></div>
+			</div></div>
+
+			<br>
+			<div id='job1' style='display:;width:570px;padding:0px;margin:0px;'><b>Environment Artist</b><br /><br /><p>Rockstar Leeds want to hire the best artists in the industry to help create the industry's best games</p>
+
+<p>You will be responsible and pro-active; creating / implementing game assets to the highest standards.</p>
+
+<p>Advanced skills in 3DS Max, Photoshop and other art techniques relevant to games are required.</p>
+<br /><br />To apply, please fill out our <a target="_blank" href="http://jobs.rockstargames.com/index.php?studio=8&amp;vacid=1456">Online Application</a><br /><br /></div><div id='job2' style='display:none;width:570px;padding:0px;margin:0px;'><b>Game Content Creator</b><br /><br /><p>As part of the design and scripting team&nbsp;you'll be heavily involved in the production and design of all game content including missions and gameplay scenarios - you'll be making our games fun!</p>
+
+<p>The role involves script-based programming, design and liaising with artists and programmers.</p>
+<p>Responsibilities:</p>
+<ul>
+  <li>Programming or Scripting experience (C++, Lua, other proprietary scripting languages, or similar). </li>
+</ul>
+<p>Qualifications:</p>
+<ul>
+  <li>Game design experience, first hand experience of developing game content is highly desirable. </li>
+</ul>
+<p>Skills:</p>
+
+<ul>
+  <li>A good sense of fun! </li>
+  <li>Good problem solving skills </li>
+  <li>Strong written and verbal communication skills. </li>
+  <li>Keen eye for detail. </li>
+  <li>Knowledge of the Microsoft Office Software Package (Word, Excel, Outlook) </li>
+</ul>
+
+<p>Rockstar offers a competitive salary and benefits package and a great work environment. This is a full-time onsite position at our studio in Leeds. Please submit your resume, cover letter and salary requirements, as well as,&nbsp;supply any demo materials or a portfolio. </p>
+<br /><br />To apply, please fill out our <a target="_blank" href="http://jobs.rockstargames.com/index.php?studio=8&amp;vacid=907">Online Application</a><br /><br /></div><div id='job3' style='display:none;width:570px;padding:0px;margin:0px;'><b>Game Programmer</b><br /><br /><p>Rockstar Leeds are looking for talented C++ programmers to join our highly motivated and creative team. If you think you have what it takes, drop us a line.</p>
+<p>Responsibilities:</p>
+<ul>
+  <li>Advanced C++ programming skills (other languages&nbsp;would be a bonus too!). </li>
+</ul>
+<p>Qualifications:</p>
+
+<ul>
+  <li>A good understanding of console programming. </li>
+</ul>
+<p>Skills:</p>
+<ul>
+  <li>A passion for&nbsp;playing and making a new generation of games. </li>
+</ul>
+<p>Rockstar offers a competitive salary and benefits package and a great work environment. This is a full-time onsite position at our studio in Leeds. Please submit your resume, cover letter and salary requirements.<br />
+&nbsp;</p>
+<br /><br />To apply, please fill out our <a target="_blank" href="http://jobs.rockstargames.com/index.php?studio=8&amp;vacid=1473">Online Application</a><br /><br /></div><div id='job4' style='display:none;width:570px;padding:0px;margin:0px;'><b>Graphics Programmer</b><br /><br />Rockstar Leeds are seeking a talented programmer with PC experience to join our highly motivated and creative team in Leeds. If you think you have what it takes, apply here;<br />
+
+<br />
+&nbsp;Responsibilities:<br />
+<br />
+&nbsp;&nbsp;&nbsp; - Work within a team of skilled developers on a Next Generation PC game<br />
+<br />
+Qualifications:<br />
+<br />
+&nbsp;&nbsp;&nbsp; - Degree in computer science or equivalent games qualification<br />
+<br />
+&nbsp;&nbsp;&nbsp; - At least 3 years experience in games development as a programmer<br />
+
+<br />
+&nbsp;&nbsp;&nbsp; - Must have shipped at least 2 recent PC games<br />
+<br />
+&nbsp;&nbsp;&nbsp; - Must have been responsible for the graphics work on a large scale game<br />
+<br />
+Required Skills:<br />
+<br />
+&nbsp;&nbsp;&nbsp; - A driven, team player with experience in advanced PC Graphical techniques.<br />
+<br />
+&nbsp;&nbsp;&nbsp; - Good C++ programming skills<br />
+
+<br />
+&nbsp;&nbsp;&nbsp; -A solid understanding of modern games programming techniques.<br />
+<br />
+&nbsp;&nbsp;&nbsp; - A passion for making and playing a new generation of games.<br />
+<br />
+Desired Skills:<br />
+<br />
+&nbsp;&nbsp;&nbsp; - Extensive game programming experience on a variety of game platforms<br />
+<br />
+Rockstar offers a competitive salary and benefits package and a great work environment. This is a full-time onsite position at our studio in Leeds. Please submit your resume, cover letter and salary requirements.
+
+<br /><br />To apply, please fill out our <a target="_blank" href="http://jobs.rockstargames.com/index.php?studio=8&amp;vacid=1092951">Online Application</a><br /><br /></div>			<script>var prevJNav=document.getElementById('job1').style;</script>
+			<img src="img/content_jobs_contact.gif" alt="" id="jBtn" name="jBtn" border="0">
+						<map name="jcontact"><area alt="" id="jobmail" name="jobmail" coords="171,38,584,0" href="mailto:jobs@rockstarleeds.com?subject=" onMouseOver="jBtn.src='img/content_jobs_contact_on.gif';" onMouseOut="jBtn.src='img/content_jobs_contact.gif';"></map>
+
+					</div>
+
+		<!-- FOOTER -->
+		<div id="dbott"><img src="img/default_bott.gif" alt="" width="700" height="121" border="0"><br>
+
+			<img src="img/white_block.gif" width="700" height="30" alt=""></div>
+
+	</div></div>
+
+	<div id="introleeds" style="display:;">
+		<script>itsShowtime();</script>
+	</div>
+</div>
+</body>
+</html>

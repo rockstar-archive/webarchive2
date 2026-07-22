@@ -1,0 +1,3672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="https://rockstar-archive.github.io/images/favicon.webp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rockstar Games Archive - Complete collection of preserved game websites">
+
+    <link rel="stylesheet" href="https://rockstar-archive.github.io/style.css">
+    <link rel="stylesheet" href="https://rockstar-archive.github.io/dropdown.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <meta property="og:title" content="Rockstar Games Archive - Website Archives">
+    <meta property="og:description"
+          content="Browse our complete collection of preserved Rockstar Games websites from 1997 to present">
+    <meta property="og:url" content="https://rockstar-archive.github.io/webarchive/">
+    <meta property="og:image" content="https://rockstar-archive.github.io/images/logogo.jpg">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="400">
+    <meta property="og:image:height" content="398">
+    <meta property="og:image:alt" content="Rockstar Games Archive Logo">
+
+<style>
+.stats-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.ui-free-button {
+    display: inline-block;
+    padding: 10px 22px;
+    background: linear-gradient(135deg, #98BEEE, #DF2567);
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+.ui-free-button:hover {
+    background: linear-gradient(135deg, #7aa8e4, #c51f5a);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+.info-panels {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.button-row {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.info-toggle {
+    width: 260px;
+    padding: 10px 16px;
+    background: linear-gradient(135deg, #98BEEE, #DF2567);
+    color: #ffffff;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.info-toggle:hover {
+    background: linear-gradient(135deg, #7aa8e4, #c51f5a);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.info-box {
+    display: none;
+    padding: 15px;
+    background: #5c5c5c;
+    color: #ddd;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.info-box a {
+    color: #98BEEE;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.info-box a:hover {
+    color: #DF2567;
+}
+</style>
+
+    <title>Rockstar Games Archive - Website Archives</title>
+
+    <script src="js/searchbar.js"></script>
+    <script>
+    function togglePanel(id) {
+        const box = document.getElementById(id);
+        box.style.display = (box.style.display === "block") ? "none" : "block";
+    }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <div class="topnav">
+        <a class="pagelogo" href="index.html" aria-label="Home">
+            <img class="pagelogoimg"
+                 src="https://rockstar-archive.github.io/images/logolpgif.gif"
+                 alt="Rockstar Games Archive Logo">
+        </a>
+
+        <nav class="nav-links">
+            <a class="topbtn" href="https://rockstar-archive.github.io/index.html">Home</a>
+            <a class="topbtn" href="https://rockstar-archive.github.io/archive.html">Archive</a>
+            <a class="topbtn" href="https://rockstar-archive.github.io/news.html">News</a>
+            <a class="topbtn" href="https://rockstar-archive.github.io/credits.html">Credits</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="holder">
+        <div class="colorbar"></div>
+
+        <!-- HERO -->
+        <section class="hero">
+            <h1 class="fade-in">Website Archives</h1>
+
+            <!-- SEARCH BAR -->
+            <div class="search-container">
+                <input
+                    type="text"
+                    id="siteSearch"
+                    placeholder="Search games, websites, or years..."
+                    autocomplete="off"
+                >
+            </div>
+
+            <p class="lead slide-up">
+                Complete collection of preserved Rockstar Games websites from 1997 to present.
+                Browse interactive recreations and historical snapshots of official game websites.
+            </p>
+
+<!-- Removed it to make the site look cleaner with new buttons
+<div class="stats-container">
+    <div class="stats-badge">
+        <span>100+ Websites Preserved</span>
+    </div>
+</div>
+-->
+
+<div class="info-panels">
+    <div class="button-row">
+        <button class="info-toggle" onclick="togglePanel('legendBox')">
+            Info
+        </button>
+
+        <a href="no-ui.php" class="ui-free-button">
+            See UI Free Version
+        </a>
+
+        <a href="_resources/flash-loader.html" class="ui-free-button">
+            Flash Loader
+        </a>
+
+        <button class="info-toggle" onclick="togglePanel('creditsBox')">
+            Credits
+        </button>
+    </div>
+
+    <div id="legendBox" class="info-box">
+        <p><strong>RUFFLE ERROR</strong> = The website wont function correctly because of an issue with our Adobe Flash emulator Ruffle.</p>
+
+        <p><strong>INCOMPLETE</strong> = Major files of this website are lost making it not completely functional.</p>
+
+        <hr>
+
+        <p>Our website uses Ruffle to emulate all Flash games.</p>
+
+        <p>Some Adobe Flash files are edited (the unedited files are saved in an unedited folder in the same path).</p>
+
+        <p>We try not to edit the original code except adding our JS loader (rgPatcher.js) and fixing paths.</p>
+
+        <p>Some sites use their own version of rgPatcher.js with custom redirects.</p>
+
+        <p>Very old websites used .ram files (these streamed audio from a different domain). These were replaced with the actual files.</p>
+    </div>
+
+    <div id="creditsBox" class="info-box">
+        <p><strong>Thanks to the Internet Archive Wayback Machine</strong> for archiving almost all of the files used here, and the internet in general. You can <a href="https://archive.org/donate" target="_blank">donate to them here</a>.</p>
+
+        <p><strong>Thanks to Ruffle</strong> for creating the Adobe Flash emulator that runs almost everything on this website. You can <a href="https://opencollective.com/ruffle#category-CONTRIBUTE" target="_blank">donate to them here</a>.</p>
+
+        <p><strong>Thanks to Rockstar Nexus’s "Unofficial Rockstar Games Museum"</strong> for archiving many lost files and websites not available on the Wayback Machine, and also for the rgLoader.js, which is based on their script. <a href="https://museum.rockstarnexus.com/" target="_blank">Check it out here</a>.</p>
+
+        <p><strong>Thanks to the Flashpoint Archive</strong> for archiving some of the websites, especially the Midnight Club 3 website. You can <a href="https://opencollective.com/flashpointarchive" target="_blank">donate to them here</a>.</p>
+
+        <p><strong>Thanks to our Discord community</strong> for recommending sites and providing archives to us.</p>
+    </div>
+
+</div>
+        </section>
+
+			<div class="archive-container">
+
+
+				<!-- Grand Theft Auto 1 -->
+				<section class="game-section" data-game="gta">
+					<div class="game-header">
+						<div class="game-icon">GTA 1</div>
+						<div class="game-info">
+							<h2>Grand Theft Auto 1</h2>
+							<div class="game-year">1997</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+						<div class="website-card" data-year="1997" data-categories="gta official">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/gta1web.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/gta" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> Official Website</h3>
+								<p>Complete official website for the original Grand Theft Auto with game information and
+									early promotional materials.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">1997</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Grand Theft Auto London -->
+				<section class="game-section" data-game="gta">
+					<div class="game-header">
+						<div class="game-icon">GTA L</div>
+						<div class="game-info">
+							<h2>Grand Theft Auto London</h2>
+							<div class="game-year">1999</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+						<div class="website-card" data-year="1999" data-categories="gta official">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/gtalondonweb.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/gtalondon" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> Official Website</h3>
+								<p>Expansion website featuring London setting with unique British-themed content and
+									game information.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">1999</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Skate and Destroy -->
+				<section class="game-section" data-game="skate and destroy">
+					<div class="game-header">
+						<div class="game-icon">SAD</div>
+						<div class="game-info">
+							<h2>Skate and Destroy</h2>
+							<div class="game-year">1999</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+						<div class="website-card" data-year="1999" data-categories="official">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/skateanddestroy.webp');">
+								<div class="website-overlay">
+									<a href="skateanddestroy.com" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Official Website</h3>
+								<p>Official website for Skate and Destroy from 1999.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">1999</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Wild Metal Country -->
+				<section class="game-section" data-game="other">
+					<div class="game-header">
+						<div class="game-icon">WMC</div>
+						<div class="game-info">
+							<h2>Wild Metal Country</h2>
+							<div class="game-year">1999</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+						<div class="website-card" data-year="1999" data-categories="other official">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/wildmetal.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/wildmetal" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> Official Website</h3>
+								<p>Early Rockstar Games website featuring tank combat gameplay with promotional materials
+									and media.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">1999</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Grand Theft Auto 2 -->
+				<section class="game-section" data-game="gta">
+					<div class="game-header">
+						<div class="game-icon">GTA 2</div>
+						<div class="game-info">
+							<h2>Grand Theft Auto 2</h2>
+							<div class="game-year">1999</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+						<!-- Official Website -->
+						<div class="website-card" data-year="1999" data-categories="gta official">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/gta2website.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/gta2" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> Official Website</h3>
+								<p>Main website for GTA 2 featuring futuristic theme with game information, downloads,
+									and media.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">1999</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Zaibatsu Corporation -->
+						<div class="website-card" data-year="1999" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/zaibatsulogo.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/gta2/zaibatsu/popup/zai_corporation.htm"
+										class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Zai Corporation</h3>
+								<p>In-universe corporate website for the Zaibatsu gang featuring fictional business
+									information.</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Gang Site</span>
+									<span class="website-year">1999</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- The Loonies -->
+						<div class="website-card" data-year="1999" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/gta2loonies.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/gta2/loonies/loonies.html" class="view-btn">View
+										Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> The Loonies</h3>
+								<p>Psychotic gang website featuring chaotic design with gang information and dark humor
+									content.</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Gang Site</span>
+									<span class="website-year">1999</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Yakuza -->
+						<div class="website-card" data-year="1999" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/gta2yakuza.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/gta2/yakuza/yakuza_index.html" class="view-btn">View
+										Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> The Yakuza</h3>
+								<p>Traditional Japanese gang website featuring organized crime theme with clan
+									information.</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Gang Site</span>
+									<span class="website-year">1999</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Rednecks -->
+						<div class="website-card" data-year="1999" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/hickmaillogo.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/gta2/rednecks/rednecks.html" class="view-btn">View
+										Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Rednecks</h3>
+								<p>Southern-themed gang website featuring "Hickmail" email service and country humor.
+								</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Gang Site</span>
+									<span class="website-year">1999</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Scientists -->
+						<div class="website-card" data-year="1999" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/scientistslogo.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/gta2/scientists/scientists.html" class="view-btn">View
+										Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> The Scientists</h3>
+								<p>Scientific research gang website featuring SRS (Scientists Research Services) theme.
+								</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Gang Site</span>
+									<span class="website-year">1999</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Krishna -->
+						<div class="website-card" data-year="1999" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/krishnalogo.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/gta2/krishna/krishna_index.html" class="view-btn">View
+										Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Krishna</h3>
+								<p>Spiritual gang website featuring Hare Krishna theme with religious and peaceful
+									messages.</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Gang Site</span>
+									<span class="website-year">1999</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Midnight Club: Street Racing -->
+				<section class="game-section" data-game="midnight club street raceing">
+					<div class="game-header">
+						<div class="game-icon">MCSR</div>
+						<div class="game-info">
+							<h2>Midnight Club: Street Racing</h2>
+							<div class="game-year">2000</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+						<!-- Official Website -->
+						<div class="website-card" data-year="2000" data-categories="official">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/mcsr.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/midnightclub/2000/index_mc.html" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<span class="card-dev">RUFFLE ERROR</span>
+							<div class="website-info">
+								<h3></i>Official Website</h3>
+								<p>Official website for Midnight Club: Street Racing from 2000.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">2000</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Smuggler's Run -->
+				<section class="game-section" data-game="gta">
+					<div class="game-header">
+						<div class="game-icon">SR1</div>
+						<div class="game-info">
+							<h2>Smuggler's Run</h2>
+							<div class="game-year">2000</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+						<!-- Official Website -->
+						<div class="website-card" data-year="2001" data-categories="official">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/smugglersrun1.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/smugglersrun1/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Official Website</h3>
+								<p>Official website for Smuggler's Run from 2000.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">2000</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Oni -->
+				<section class="game-section" data-game="oni">
+					<div class="game-header">
+						<div class="game-icon">Oni</div>
+						<div class="game-info">
+							<h2>Oni</h2>
+							<div class="game-year">2001</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+						<!-- Official Website -->
+						<div class="website-card" data-year="2001" data-categories="official">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/oni.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/oni" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Official Website</h3>
+								<p>Official website for Oni.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">2001</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Max Payne -->
+				<section class="game-section" data-game="max payne">
+					<div class="game-header">
+						<div class="game-icon">MP</div>
+						<div class="game-info">
+							<h2>Max Payne</h2>
+							<div class="game-year">2001</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+						<!-- Official Website -->
+						<div class="website-card" data-year="2001" data-categories="official">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/maxpayne.webp');">
+								<div class="website-overlay">
+									<a href="maxpayne.com" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> Official Website</h3>
+								<p>Official website for Max Payne from Remedy.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">2001</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+
+				<!-- The Italian Job -->
+				<section class="game-section" data-game="gta">
+					<div class="game-header">
+						<div class="game-icon">TIJ</div>
+						<div class="game-info">
+							<h2>The Italian Job</h2>
+							<div class="game-year">2001</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+						<!-- Official Website -->
+						<div class="website-card" data-year="2001" data-categories="official">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/italianjob.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/italianjob" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> Official Website</h3>
+								<p>Official website for The Italian Job.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">2001</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Smuggler's Run 2-->
+				<section class="game-section" data-game="gta">
+					<div class="game-header">
+						<div class="game-icon">SR2</div>
+						<div class="game-info">
+							<h2>Smuggler's Run 2</h2>
+							<div class="game-year">2001</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+						<!-- Official Website -->
+						<div class="website-card" data-year="2001" data-categories="official">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/smugglersrun2.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/smugglersrun2/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Official Website</h3>
+								<p>Official website for Smuggler's Run 2 from 2001.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">2001</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Grand Theft Auto 3 -->
+				<section class="game-section" data-game="gta">
+					<div class="game-header">
+						<div class="game-icon">GTA 3</div>
+						<div class="game-info">
+							<h2>Grand Theft Auto 3</h2>
+							<div class="game-year">2001</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+						<!-- Official Website -->
+						<div class="website-card" data-year="2001" data-categories="gta official">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/grandtheftauto3.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/grandtheftauto3" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> Official Website</h3>
+								<p>Revolutionary 3D GTA website featuring Liberty City theme with extensive game media.
+								</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">2001</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- German Website -->
+						<div class="website-card" data-year="2001" data-categories="gta official regional">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/gta3-de.webp');">
+								<div class="website-overlay">
+									<a href="gta3.de/info.html" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> German Website</h3>
+								<p>Regional German-language website with localized content and game information.</p>
+								<span class="category-tag">Regional</span>
+								<div class="website-meta">
+									<span class="website-type">Regional</span>
+									<span class="website-year">2001</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Capital Autos -->
+						<div class="website-card" data-year="2001" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/capitalaudiosalesogo.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/grandtheftauto3/flash/capitalautos" class="view-btn">View
+										Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Capital Autos</h3>
+								<p>In-game car dealership website featuring vehicle sales and automotive services.</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Business</span>
+									<span class="website-year">2001</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Pets Overnight -->
+						<div class="website-card" data-year="2001" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/petsovernightlogo.webp');">
+								<div class="website-overlay">
+									<a href="petsovernight.com" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Pets Overnight</h3>
+								<p>Pet delivery service website featuring animal transportation with humorous content.
+								</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Business</span>
+									<span class="website-year">2001</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Sleep Off Lard -->
+						<div class="website-card" data-year="2001" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/dormatronlogo.webp');">
+								<div class="website-overlay">
+									<a href="sleepofflard.com/base.html" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Sleep Off Lard</h3>
+								<p>Weight loss program website featuring Dormatron sleep therapy system and fitness
+									tips.</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Business</span>
+									<span class="website-year">2001</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Ammunation -->
+						<div class="website-card" data-year="2001" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/ammunationweb.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/grandtheftauto3/flash/ammunation" class="view-btn">View
+										Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Ammunation</h3>
+								<p>Weapons store website featuring firearms sales, ammunition, and tactical equipment.
+								</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Business</span>
+									<span class="website-year">2001</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Pogo The Monkey -->
+						<div class="website-card" data-year="2001" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/pogologo.webp');">
+								<div class="website-overlay">
+									<a href="pogothemonkey.com/base.html" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> Pogo The Monkey</h3>
+								<p>Children's game website featuring Pogo the Monkey character.
+								</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Entertainment</span>
+									<span class="website-year">2001</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Liberty Tree -->
+						<div class="website-card" data-year="2001" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/libertytreelogo.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/libertytree" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Liberty Tree</h3>
+								<p>Liberty City newspaper website featuring local news, classifieds, and community
+									events.</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">News</span>
+									<span class="website-year">2001</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Love Media -->
+						<div class="website-card" data-year="2001" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/lovemedialogo.webp');">
+								<div class="website-overlay">
+									<a href="lovemedia.tv" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Love Media</h3>
+								<p>Entertainment network website featuring Print, Television, Radio, Movies and Dog Food.
+								</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Entertainment</span>
+									<span class="website-year">2001</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Game Radio -->
+						<div class="website-card" data-year="2001" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/gameRadiologo.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/grandtheftauto3/flash/gameRadio" class="view-btn">View
+										Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Game Radio</h3>
+								<p>In-game radio station website featuring electronic music, DJ information, and
+									playlists.</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Radio</span>
+									<span class="website-year">2001</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Casino -->
+						<div class="website-card" data-year="2001" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/casinoweb.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/grandtheftauto3/flash/casino" class="view-btn">View
+										Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Oicho-Kabu Casino</h3>
+								<p>Japanese casino website featuring traditional gambling games and entertainment.</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Entertainment</span>
+									<span class="website-year">2001</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Liberty City College -->
+						<div class="website-card" data-year="2001" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/lcclogo.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/grandtheftauto3/flash/libertyCityCollege/index.htm"
+										class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Liberty City College</h3>
+								<p>Educational institution website featuring course information and campus facilities.
+								</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Education</span>
+									<span class="website-year">2001</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Francis International Airport -->
+						<div class="website-card" data-year="2001" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/francisairportlogo.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/grandtheftauto3/flash/francisAirport"
+										class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Francis Airport</h3>
+								<p>Airport services website featuring flight information.</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Transportation</span>
+									<span class="website-year">2001</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- MSX FM -->
+						<div class="website-card" data-year="2001" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/msxfmlogo.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/grandtheftauto3/flash/msxfm" class="view-btn">View
+										Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> MSX FM</h3>
+								<p>MSX FN radio station website featuring electronic music culture and DJ mixes.
+								</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Radio</span>
+									<span class="website-year">2001</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- GTA 3 Wallpapers -->
+						<div class="website-card" data-year="2001" data-categories="gta promotional">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/grandtheftauto3-desktops.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/grandtheftauto3/desktops" class="view-btn">View
+										Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Wallpapers</h3>
+								<p>Official desktop wallpaper collection featuring character art and Liberty City
+									scenes.</p>
+								<span class="category-tag">Promotional</span>
+								<div class="website-meta">
+									<span class="website-type">Media</span>
+									<span class="website-year">2001</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Make You Famous -->
+						<div class="website-card" data-year="2001" data-categories="gta promotional">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/makeyoufamous.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/makeyoufamous" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Make You Famous</h3>
+								<p>Promotional contest website offering players a chance to appear in Rockstar games.
+								</p>
+								<span class="category-tag">Promotional</span>
+								<div class="website-meta">
+									<span class="website-type">Contest</span>
+									<span class="website-year">2001</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- State of Emergency -->
+				<section class="game-section" data-game="state of emergency">
+					<div class="game-header">
+						<div class="game-icon">SOE</div>
+						<div class="game-info">
+							<h2>State of Emergency</h2>
+							<div class="game-year">2002</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+						<!-- Official Website -->
+						<div class="website-card" data-year="2002" data-categories="official">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/stateofemergency.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/stateofemergency/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Official Website</h3>
+								<p>Official website for State of Emergency from 2002.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">2002</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Smuggler's Run Warzones-->
+				<section class="game-section" data-game="gta">
+					<div class="game-header">
+						<div class="game-icon">SRW</div>
+						<div class="game-info">
+							<h2>Smuggler's Run Warzones</h2>
+							<div class="game-year">2002</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+						<!-- Official Website -->
+						<div class="website-card" data-year="2002" data-categories="official">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/smugglersrunwarzones.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/smugglersrunwarzones/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Official Website</h3>
+								<p>Official website for Smuggler's Run Warzones from 2002.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">2002</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Grand Theft Auto Vice City -->
+				<section class="game-section" data-game="gta vice city">
+					<div class="game-header">
+						<div class="game-icon">VC</div>
+						<div class="game-info">
+							<h2>Grand Theft Auto Vice City</h2>
+							<div class="game-year">2002</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+
+					<!-- Official Website -->
+						<div class="website-card" data-year="2002" data-categories="offical">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/vicecity.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/vicecity/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> Official Website</h3>
+								<p>The Official Website for GTA: VC
+								</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">2002</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Kent Paul -->
+						<div class="website-card" data-year="2002" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/kentpaullogo.webp');">
+								<div class="website-overlay">
+									<a href="kentpaul.com" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Kent Paul</h3>
+								<p>Personal website for music manager Kent Paul featuring 80s Miami theme and contact
+									info.</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Character</span>
+									<span class="website-year">2002</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Degenatron -->
+						<div class="website-card" data-year="2002" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/degenatronlogo.webp');">
+								<div class="website-overlay">
+									<a href="degenatron.com" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Degenatron</h3>
+								<p>Degenatron ardace machine fan site with a retro-futuristic design.</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Entertainment</span>
+									<span class="website-year">2002</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Darren Webb -->
+						<div class="website-card" data-year="2002" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/darrenweblogo.webp');">
+								<div class="website-overlay">
+									<a href="darrenwebb.com" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Darren Webb</h3>
+								<p>Darren Webb´s Personal website.</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Character</span>
+									<span class="website-year">2002</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Vice City Wallpapers -->
+						<div class="website-card" data-year="2002" data-categories="gta promotional">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/vicecity-desktops.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/vicecity/desktops" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Wallpapers</h3>
+								<p>Official 80s-themed desktop wallpapers featuring Vice City characters and locations.
+								</p>
+								<span class="category-tag">Promotional</span>
+								<div class="website-meta">
+									<span class="website-type">Media</span>
+									<span class="website-year">2002</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Midnight Club 2 -->
+				<section class="game-section" data-game="midnight club 2">
+					<div class="game-header">
+						<div class="game-icon">MC2</div>
+						<div class="game-info">
+							<h2>Midnight Club 2</h2>
+							<div class="game-year">2003</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+
+					<!-- Official Website -->
+						<div class="website-card" data-year="2003" data-categories="offical">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/midnightclub2.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/midnightclub2/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> Official Website</h3>
+								<p>The Official Website for Midnight Club 2.
+								</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">2003</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Max Payne 2 -->
+				<section class="game-section" data-game="manhunt">
+					<div class="game-header">
+						<div class="game-icon">MP2</div>
+						<div class="game-info">
+							<h2>Max Payne 2</h2>
+							<div class="game-year">2003</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+
+					<!-- Official Website -->
+						<div class="website-card" data-year="2003" data-categories="offical">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/maxpayne2.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/maxpayne2/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> Official Website</h3>
+								<p>The Official Website for Max Payne 2.
+								</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">2003</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Manhunt -->
+				<section class="game-section" data-game="manhunt">
+					<div class="game-header">
+						<div class="game-icon">M</div>
+						<div class="game-info">
+							<h2>Manhunt</h2>
+							<div class="game-year">2003</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+
+					<!-- Official Website -->
+						<div class="website-card" data-year="2003" data-categories="offical">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/manhunt.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/manhunt/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> Official Website</h3>
+								<p>The Official Website for Manhunt.
+								</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">2003</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Flash Advertisement -->
+						<div class="website-card" data-year="2003" data-categories="official">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/manhunt-ad.webp');">
+								<div class="website-overlay">
+									<a href="_resources/flashads/manhunt/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Flash Advertisement</h3>
+								<p>A Flash Advertisement for Manhunt.</p>
+								<span class="category-tag">Advertisement</span>
+								<div class="website-meta">
+									<span class="website-type">Advertisement</span>
+									<span class="website-year">2003</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Red Dead Revolver -->
+				<section class="game-section" data-game="red dead revolver">
+					<div class="game-header">
+						<div class="game-icon">RDR</div>
+						<div class="game-info">
+							<h2>Red Dead Revolver</h2>
+							<div class="game-year">2004</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+						<!-- Official Website -->
+						<div class="website-card" data-year="2004" data-categories="official">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/rdr.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/reddeadrevolver/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Official Website</h3>
+								<p>Official website for Red Dead Revolver from 2004.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">2004</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Max Payne (Game Boy Advance) -->
+				<section class="game-section" data-game="max payne gba">
+					<div class="game-header">
+						<div class="game-icon">MPGBA</div>
+						<div class="game-info">
+							<h2>Max Payne (Game Boy Advance)</h2>
+							<div class="game-year">2003</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+						
+						<!-- Official Website -->
+						<div class="website-card" data-year="2003" data-categories="official">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/maxpaynegba.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/maxpayne/gba" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> Official Website</h3>
+								<p>Official website for Max Payne (Game Boy Advance).</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">2003</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+				<!-- Grand Theft Auto San Andreas -->
+				<section class="game-section" data-game="gta">
+					<div class="game-header">
+						<div class="game-icon">SA</div>
+						<div class="game-info">
+							<h2>Grand Theft Auto San Andreas</h2>
+							<div class="game-year">2004</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+
+					<!-- Official Website -->
+						<div class="website-card" data-year="2004" data-categories="offical">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/sanandreas.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/sanandreas/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<span class="card-dev">RUFFLE ERROR</span>
+							<div class="website-info">
+								<h3></i> Official Website</h3>
+								<p>The Official Website for Grand Theft Auto: San Andreas
+								</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">2004</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Maccer -->
+						<div class="website-card" data-year="2004" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/maccerlogo.webp');">
+								<div class="website-overlay">
+									<a href="maccer.net" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Maccer</h3>
+								<p>Personal website for character Maccer featuring British rock culture and personal
+									blog.</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Character</span>
+									<span class="website-year">2004</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Epsilon Program 2004 -->
+						<div class="website-card" data-year="2004" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/2004epsilonlogo.webp');">
+								<div class="website-overlay">
+									<a href="epsilonprogram.com/2004-12/index.htm" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Epsilon Program (2004)</h3>
+								<p>Cult organization website featuring spiritual teachings and membership information.
+								</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Organization</span>
+									<span class="website-year">2004</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- FearItDoIt -->
+						<div class="website-card" data-year="2004" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/fearitdoitlogo.webp');">
+								<div class="website-overlay">
+									<a href="fearitdoit.com/index.htm" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Fear It? Do It!</h3>
+								<p>Website for the In-Game self-help book Fear It? Do It!.</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Sports</span>
+									<span class="website-year">2004</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Cluckin' Bell -->
+						<div class="website-card" data-year="2004" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/cluckinbelllogo.webp');">
+								<div class="website-overlay">
+									<a href="cluckinbellhappychicken.com" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Cluckin' Bell</h3>
+								<p>Fast food chain website featuring chicken restaurant menu and locations.</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Business</span>
+									<span class="website-year">2004</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- West Coast Rap Legends -->
+						<div class="website-card" data-year="2004" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/westcoastraplegends.webp');">
+								<div class="website-overlay">
+									<a href="westcoastraplegends.com" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> West Coast Rap Legends</h3>
+								<p>Music tribute website featuring forgotten West Coast hip-hop artists and history.</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Music</span>
+									<span class="website-year">2004</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- eXsorbeo -->
+						<div class="website-card" data-year="2004" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/exsorbeo.webp');">
+								<div class="website-overlay">
+									<a href="exsorbeo.com/index.htm" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> EXsorbeo</h3>
+								<p>Fan website for the EXsorbeo handheld game system featuring an Emulator.</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Music</span>
+									<span class="website-year">2004</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- San Andreas Wallpapers -->
+						<div class="website-card" data-year="2004" data-categories="gta promotional">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/sanandreas-desktops.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/sanandreas/desktops" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Wallpapers</h3>
+								<p>Official West Coast-themed desktop wallpapers featuring gang culture and locations.
+								</p>
+								<span class="category-tag">Promotional</span>
+								<div class="website-meta">
+									<span class="website-type">Media</span>
+									<span class="website-year">2004</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Grand Theft Auto Advance -->
+				<section class="game-section" data-game="gta">
+					<div class="game-header">
+						<div class="game-icon">GBA</div>
+						<div class="game-info">
+							<h2>Grand Theft Auto Advance</h2>
+							<div class="game-year">2004</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+
+						<!-- Official Website -->		
+						<div class="website-card" data-year="2004" data-categories="gta official">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/gtaadvancelogo.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/grandtheftauto/2005-07/gba" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> Official Website</h3>
+								<p>Grand Theft Auto Advance website featuring game information and media.
+								</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">2004</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Midnight Club 3: DUB Edition -->
+				<section class="game-section" data-game="midnightclub">
+					<div class="game-header">
+						<div class="game-icon">MC3</div>
+						<div class="game-info">
+							<h2>Midnight Club 3: DUB Edition</h2>
+							<div class="game-year">2005</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+
+						<!-- Official Website -->
+						<div class="website-card" data-year="2005" data-categories="midnight club 3">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/midnightclub3.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/midnightclub3/2011-05/"
+										class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Official Website</h3>
+								<p>Official interactive Flash website featuring customizable car screensavers and an exclusive trailer.</p>
+								<span class="category-tag">Promotional</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">2005</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Remix Website -->
+						<div class="website-card" data-year="2005" data-categories="midnight club 3">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/midnightclub3remix.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/midnightclub3/2011-05/remix"
+										class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3>Midnight Club 3: DUB Edition Remix Website</h3>
+								<p>Official website for the Remix version of Midnight Club 3.</p>
+								<span class="category-tag">Promotional</span>
+								<div class="website-meta">
+									<span class="website-type">Media</span>
+									<span class="website-year">2005</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Wallpapers -->
+						<div class="website-card" data-year="2005" data-categories="midnightclub promotional">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/mc3dubwallpaper.webp');">
+								<div class="website-overlay">
+									<a href="_resources/midnight-club-3-dub-wallpapers/" class="view-btn">View
+										Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Wallpapers</h3>
+								<p>Wallpapers from the DUB Publishing website.</p>
+								<span class="category-tag">Promotional</span>
+								<div class="website-meta">
+									<span class="website-type">Media</span>
+									<span class="website-year">2005</span>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Official Website 2005-01-11 home.swf -->
+						<div class="website-card" data-year="2005" data-categories="midnightclub promotional">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/2005-01-11_home.swf.webp');">
+								<div class="website-overlay">
+									<a href="https://rockstar-archive.h0rizon.dev/webarchive/_resources/flash-loader.html?LOADSWFhttps://rockstar-archive.h0rizon.dev/webarchive/rockstargames.com/midnightclub3/2005-01-11/home.swf" class="view-btn">View
+										Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3>Official Website 2005-01-11 home.swf</h3>
+								<p>An older locked home.swf from 2005-01-11 before the website was completely released. This only loads the home.swf not the full site.</p>
+								<span class="category-tag">Promotional</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">2005</span>
+								</div>
+							</div>
+						</div>
+
+												
+						<!-- Official Website 2005-03-07 home.swf -->
+						<div class="website-card" data-year="2005" data-categories="midnightclub promotional">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/2005-03-07_home.swf.webp');">
+								<div class="website-overlay">
+									<a href="https://rockstar-archive.h0rizon.dev/webarchive/_resources/flash-loader.html?LOADSWFhttps://rockstar-archive.h0rizon.dev/webarchive/rockstargames.com/midnightclub3/2005-03-07/home.swf" class="view-btn">View
+										Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3>Official Website 2005-03-07 home.swf</h3>
+								<p>An older locked home.swf from 2005-03-07 before the website was completely released. This only loads the home.swf not the full site.</p>
+								<span class="category-tag">Promotional</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">2005</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+				<!-- The Warriors -->
+				<section class="game-section" data-game="thewarriors">
+					<div class="game-header">
+						<div class="game-icon">TW</div>
+						<div class="game-info">
+							<h2>The Warriors</h2>
+							<div class="game-year">2005</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+						<!-- Official Website -->
+						<div class="website-card" data-year="2005" data-categories="The Warriors">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/thewarriors.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/thewarriors/"
+										class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<span class="card-dev">RUFFLE ERROR</span>
+							<div class="website-info">
+								<h3>Official Website</h3>
+								<p>The Official website for The Warriors from 2005.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">2005</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Grand Theft Auto: Liberty City Stories -->
+				<section class="game-section" data-game="gta">
+					<div class="game-header">
+						<div class="game-icon">LCS</div>
+						<div class="game-info">
+							<h2>GTA: Liberty City Stories</h2>
+							<div class="game-year">2005</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+						<!-- Official Website -->
+						<div class="website-card" data-year="2005" data-categories="gta main">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/libertycitystories.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/libertycitystories/"
+										class="view-btn">View Archive</a>
+								</div>
+						   	</div>
+							<div class="website-info">
+								<h3>Official Website</h3>
+								<p>The Official website for Grand Theft Auto Libery City Stories from 2005.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">2005</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Official Flash Free Website -->
+						<div class="website-card" data-year="2005" data-categories="gta promotional">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/libertycitystories_noflash.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/libertycitystories/noflash"
+										class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Official Flash Free Website</h3>
+								<p>The Official flash free website for Grand Theft Auto Libery City Stories from 2005.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">2005</span>
+								</div>
+							</div>
+						</div>						
+
+						<!-- BradyGames Map -->
+						<div class="website-card" data-year="2005" data-categories="gta promotional">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/gta-lcs-bradygames-map.webp');">
+								<div class="website-overlay">
+									<a href="_resources/grand-theft-auto-libery-city-stories-bradygames-map/"
+										class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> BradyGames Map</h3>
+								<p>Interactive Flash map from BradyGames featuring Liberty City locations and points of
+									interest.</p>
+								<span class="category-tag">Promotional</span>
+								<div class="website-meta">
+									<span class="website-type">Interactive</span>
+									<span class="website-year">2005</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Crowfest98 -->
+						<div class="website-card" data-year="2005" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/crowfest98.webp');">
+								<div class="website-overlay">
+									<a href="crowfest98.com" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Crowfest98</h3>
+								<p>Music festival website featuring alternative rock bands and event information.</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Entertainment</span>
+									<span class="website-year">2005</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Paulies Revue -->
+						<div class="website-card" data-year="2005" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/pauliesrevue.webp');">
+								<div class="website-overlay">
+									<a href="pauliesrevue.net" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Paulies Revue</h3>
+								<p>Website for Paulies Revue a bar/strip club.</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Entertainment</span>
+									<span class="website-year">2005</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Bathtub Gin Still -->
+						<div class="website-card" data-year="2005" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/bathtubginstill.webp');">
+								<div class="website-overlay">
+									<a href="bathtubginstill.com" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Bathtub Gin Still</h3>
+								<p>Website featuring "Old Horsey" a working replica of the bathtubs used to secretly make booze.</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Business</span>
+									<span class="website-year">2005</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- PastMaster -->
+						<div class="website-card" data-year="2005" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/pastmaster-game.webp');">
+								<div class="website-overlay">
+									<a href="pastmaster-game.com" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> PastMaster</h3>
+								<p>Website for PastMaster a quasi-educational computer game.</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Entertainment</span>
+									<span class="website-year">2005</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Citizens United -->
+						<div class="website-card" data-year="2005" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/citizensunitednegatingtechnology.org.webp');">
+								<div class="website-overlay">
+									<a href="citizensunitednegatingtechnology.org/index.htm" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3><i class="fa fa-ban"></i> Citizens United</h3>
+								<p>Anti-technology organization website featuring anti-internet propaganda.
+								</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Organization</span>
+									<span class="website-year">2005</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Vivisection -->
+						<div class="website-card" data-year="2005" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/itsvivisection.webp');">
+								<div class="website-overlay">
+									<a href="itsvivisection.com" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Vivisection</h3>
+								<p>Website for the Vivisection science kit/board game.</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Science</span>
+									<span class="website-year">2005</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Electron Zone Radio -->
+						<div class="website-card" data-year="2005" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/electronzoneradio.webp');">
+								<div class="website-overlay">
+									<a href="electronzoneradio.com" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Electron Zone Radio</h3>
+								<p>Talk radio station website featuring message boards.</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Radio</span>
+									<span class="website-year">2005</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Lips 106 -->
+						<div class="website-card" data-year="2005" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/lips106fm.webp');">
+								<div class="website-overlay">
+									<a href="lips106fm.com/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Lips 106 FM</h3>
+								<p>Pop music radio station website featuring archived streams.</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Radio</span>
+									<span class="website-year">2005</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Ammunation -->
+						<div class="website-card" data-year="2005" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/ammunation.webp');">
+								<div class="website-overlay">
+									<a href="ammunation.net/index.htm" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Ammunation</h3>
+								<p>Ammunation website featuring Y2K warnings and survival equipment.</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Business</span>
+									<span class="website-year">2005</span>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Flash Advertisement -->
+						<div class="website-card" data-year="2005" data-categories="advertisement">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/lcs-ad.webp');">
+								<div class="website-overlay">
+									<a href="_resources/flashads/libertycitystories/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3>Flash Advertisement</h3>
+								<p>Flash Advertisement for Grand Theft Auto: Liberty City Stories from 2005.</p>
+								<span class="category-tag">Advertisement</span>
+								<div class="website-meta">
+									<span class="website-type">Advertisement</span>
+									<span class="website-year">2005</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Rockstar Games Presents Table Tennis -->
+				<section class="game-section" data-game="table tennis">
+					<div class="game-header">
+						<div class="game-icon">TT</div>
+						<div class="game-info">
+							<h2>Rockstar Games Presents Table Tennis</h2>
+							<div class="game-year">2006</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+						<!-- Official Website -->
+						<div class="website-card" data-year="2006" data-categories="official">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/tabletennis.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/tabletennis" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Official Website</h3>
+								<p>Official website for Rockstar Games Presents Table Tennis from 2006.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">2006</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Bully -->
+				<section class="game-section" data-game="other">
+					<div class="game-header">
+						<div class="game-icon">B</div>
+						<div class="game-info">
+							<h2>Bully</h2>
+							<div class="game-year">2006</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+						<!-- Official Website 2005-06 -->
+						<div class="website-card" data-year="2006" data-categories="promotional">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/bully-2005-06.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/bully/2005-06/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3>Official Website June 2005<h3></h3>
+									<p>The official Bully website before the games release.
+									<p>
+										<span class="category-tag">Promotional</span>
+									<div class="website-meta">
+										<span class="website-type">Official Site</span>
+										<span class="website-year">2005</span>
+									</div>
+							</div>
+						</div>
+
+						<!-- Official Website 2006-04 -->
+						<div class="website-card" data-year="2006" data-categories="promotional">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/bully-2006-04.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/bully/2006-04/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3>Official Website April 2006<h3></h3>
+									<p>The official Bully website before the games release now includes screenshots.
+									<p>
+										<span class="category-tag">Promotional</span>
+									<div class="website-meta">
+										<span class="website-type">Official Site</span>
+										<span class="website-year">2006</span>
+									</div>
+							</div>
+						</div>
+
+						<!-- Official Website 2006-10 -->
+						<div class="website-card" data-year="2006" data-categories="promotional">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/bully-2006-10.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/bully/2006-10/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<span class="card-dev">RUFFLE ERROR, INCOMPLETE</span>
+							<div class="website-info">
+								<h3>Official Website October 2006<h3></h3>
+									<p>The official Bully website shortly after release featuring trailers, downloads, books and much more.
+									<p>
+										<span class="category-tag">Promotional</span>
+									<div class="website-meta">
+										<span class="website-type">Official Site</span>
+										<span class="website-year">2006</span>
+									</div>
+							</div>
+						</div>
+
+						<!-- Official Website 2006-12 -->
+						<div class="website-card" data-year="2006" data-categories="promotional">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/bully-2006-12.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/bully/2006-12/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<span class="card-dev">RUFFLE ERROR, INCOMPLETE</span>
+							<div class="website-info">
+								<h3>Official Website December 2006<h3></h3>
+									<p>The official Bully website with a winter look, special trailers and screenshots.
+									<p>
+										<span class="category-tag">Promotional</span>
+									<div class="website-meta">
+										<span class="website-type">Official Site</span>
+										<span class="website-year">2006</span>
+									</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Grand Theft Auto: Vice City Stories -->
+				<section class="game-section" data-game="gta">
+					<div class="game-header">
+						<div class="game-icon">VCS</div>
+						<div class="game-info">
+							<h2>GTA: Vice City Stories</h2>
+							<div class="game-year">2006</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+						<!-- Official Website -->
+						<div class="website-card" data-year="2006" data-categories="gta main">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/vicecitystories.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/vicecitystories/"
+										class="view-btn">View Archive</a>
+								</div>
+						   	</div>
+							<span class="card-dev">RUFFLE ERROR</span>
+							<div class="website-info">
+								<h3>Official Website</h3>
+								<p>The Official website for Grand Theft Auto Vice City Stories from 2006.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">2006</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Official Flash Free Website -->
+						<div class="website-card" data-year="2006" data-categories="gta promotional">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/vicecitystories_noflash.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/vicecitystories/noflash"
+										class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Official Flash Free Website</h3>
+								<p>The Official flash free website for Grand Theft Auto Vice City Stories from 2006.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">2006</span>
+								</div>
+							</div>
+						</div>						
+
+						<!-- Flash Advertisements -->
+						<div class="website-card" data-year="2006" data-categories="promotional">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/vicecitystories-ads.webp');">
+								<div class="website-overlay">
+									<a href="_resources/flashads/vicecitystories/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Flash Advertisements</h3>
+								<p>Flash advertising campaign for Vice City Stories PSP release.</p>
+								<span class="category-tag">Promotional</span>
+								<div class="website-meta">
+									<span class="website-type">Advertising</span>
+									<span class="website-year">2006</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Manhunt 2 -->
+				<section class="game-section" data-game="other">
+					<div class="game-header">
+						<div class="game-icon">MH2</div>
+						<div class="game-info">
+							<h2>Manhunt 2</h2>
+							<div class="game-year">2007</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+						<!-- Official Website May 2011 -->
+						<div class="website-card" data-year="2011" data-categories="promotional">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/manhunt-2-2011-05.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/manhunt2/2011-05/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3>Official Website<h3></h3>
+									<p>The Official Manhunt 2 Website from May 2011.
+									<p>
+										<span class="category-tag">Primary</span>
+									<div class="website-meta">
+										<span class="website-type">Official Site</span>
+										<span class="website-year">2007</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Official Teaser Website Febuary 2007 -->
+						<div class="website-card" data-year="2007" data-categories="promotional">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/manhunt-2-2007-02.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/manhunt2/2007-02/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3>Official Teaser Website Febuary 2007<h3></h3>
+									<p>The Official Manhunt 2 Pre Release Teaser Website from Febuary 2007.
+									<p>
+										<span class="category-tag">Promotional</span>
+									<div class="website-meta">
+										<span class="website-type">Official Site</span>
+										<span class="website-year">2007</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Bully: Scholarship Edition -->
+				<section class="game-section" data-game="other">
+					<div class="game-header">
+						<div class="game-icon">B-SE</div>
+						<div class="game-info">
+							<h2>Bully: Scholarship Edition</h2>
+							<div class="game-year">2008</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+						<!-- Official Website 2011-08 -->
+						<div class="website-card" data-year="2006" data-categories="promotional">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/bully-2011-05.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/bully/2011-05/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<span class="card-dev">RUFFLE ERROR</span>
+							<div class="website-info">
+								<h3> Official Website</h3>
+								<p>The Official Bully: Scholarship Edition Website from May, 2011.</p>
+								<span class="category-tag">Promotional</span>
+								<div class="website-meta">
+									<span class="website-type">Advertising</span>
+									<span class="website-year">2008</span>
+								</div>
+							</div>
+						</div>
+						<!-- Flash Advertisements -->
+						<div class="website-card" data-year="2006" data-categories="promotional">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/bully-se-ads.webp');">
+								<div class="website-overlay">
+									<a href="_resources/flashads/bully-se/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Flash Advertisements</h3>
+								<p>Collection of Flash advertisements for Bully: Scholarship Edition promotion.</p>
+								<span class="category-tag">Promotional</span>
+								<div class="website-meta">
+									<span class="website-type">Advertising</span>
+									<span class="website-year">2008</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Grand Theft Auto IV -->
+				<section class="game-section" data-game="gta">
+					<div class="game-header">
+						<div class="game-icon">IV</div>
+						<div class="game-info">
+							<h2>Grand Theft Auto IV</h2>
+							<div class="game-year">2008</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+						<!-- Official Website -->
+						<div class="website-card" data-year="2008" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/IV.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/IV/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<span class="card-dev">RUFFLE ERROR</span>
+							<div class="website-info">
+								<h3>Official Website</h3>
+								<p>The official website for GTA IV.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">2008</span>
+								</div>
+							</div>
+						</div>
+
+
+						<!-- WKTT Radio -->
+						<div class="website-card" data-year="2008" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/wkttradio.webp');">
+								<div class="website-overlay">
+									<a href="wkttradio.com" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> WKTT Radio</h3>
+								<p>WKTT Radio website featuring the phone-in contest to appear on the in-game radio station.</p>
+								<span class="category-tag">Promotional</span>
+								<div class="website-meta">
+									<span class="website-type">Contest</span>
+									<span class="website-year">2008</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Martin Serious Show -->
+						<div class="website-card" data-year="2008" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/martinserious.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/IV/martinserious" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> The Martin Serious Show</h3>
+								<p>The Martin Serious Show website curated by WKTT Radio featuring message boards.</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Entertainment</span>
+									<span class="website-year">2008</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- GTA IV Flash Ads -->
+						<div class="website-card" data-year="2008" data-categories="promotional">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/iv-ads.webp');">
+								<div class="website-overlay">
+									<a href="_resources/flashads/iv/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Flash Advertisements</h3>
+								<p>Main game Flash advertising campaign for GTA IV release.</p>
+								<span class="category-tag">Promotional</span>
+								<div class="website-meta">
+									<span class="website-type">Advertising</span>
+									<span class="website-year">2008</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- TLAD Flash Ads -->
+						<div class="website-card" data-year="2009" data-categories="promotional">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/tlad-ads.webp');">
+								<div class="website-overlay">
+									<a href="_resources/flashads/tlad/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> TLAD Flash Ads</h3>
+								<p>Flash advertisements for The Lost and Damned expansion pack.</p>
+								<span class="category-tag">Promotional</span>
+								<div class="website-meta">
+									<span class="website-type">Advertising</span>
+									<span class="website-year">2009</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- EFLC Flash Ads -->
+						<div class="website-card" data-year="2010" data-categories="promotional">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/eflc-ads.webp');">
+								<div class="website-overlay">
+									<a href="_resources/flashads/eflc/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> EFLC Flash Ads</h3>
+								<p>Flash advertisements for Episodes from Liberty City standalone release.</p>
+								<span class="category-tag">Promotional</span>
+								<div class="website-meta">
+									<span class="website-type">Advertising</span>
+									<span class="website-year">2010</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Midnight Club: Los Angeles -->
+				<section class="game-section" data-game="midnightclub">
+					<div class="game-header">
+						<div class="game-icon">MCLA</div>
+						<div class="game-info">
+							<h2>Midnight Club: Los Angeles</h2>
+							<div class="game-year">2008</div>
+						</div>
+					</div>
+					<!-- Official Website -->
+					<div class="websites-grid">
+						<div class="website-card" data-year="2008" data-categories="promotional">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/midnightclubla.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/midnightclubLA/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<span class="card-dev">INCOMPLETE</span>
+							<div class="website-info">
+								<h3> Official Website</h3>
+								<p>The Official Website for Midnight Club: Los Angeles.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">2008</span>
+								</div>
+							</div>
+						</div>
+						<!-- Fash Advertisements -->
+						<div class="website-card" data-year="2008" data-categories="promotional">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/midnightclubla-ads.webp');">
+								<div class="website-overlay">
+									<a href="_resources/flashads/midnightclubla/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Flash Advertisements</h3>
+								<p>Flash advertising campaign for Midnight Club: Los Angeles release.</p>
+								<span class="category-tag">Promotional</span>
+								<div class="website-meta">
+									<span class="website-type">Advertising</span>
+									<span class="website-year">2008</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Grand Theft Auto: Chinatown Wars -->
+				<section class="game-section" data-game="gta">
+					<div class="game-header">
+						<div class="game-icon">CW</div>
+						<div class="game-info">
+							<h2>GTA: Chinatown Wars</h2>
+							<div class="game-year">2009</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+						<div class="website-card" data-year="2009" data-categories="promotional">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/gta-cw-papercrafts.webp');">
+								<div class="website-overlay">
+									<a href="_resources/grand-theft-auto-chinatown-wars-papercrafts/"
+										class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Papercrafts</h3>
+								<p>Printable papercraft models featuring Chinatown Wars characters and vehicles.</p>
+								<span class="category-tag">Promotional</span>
+								<div class="website-meta">
+									<span class="website-type">Creative</span>
+									<span class="website-year">2009</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- LA Noire -->
+				<section class="game-section" data-game="la noire">
+					<div class="game-header">
+						<div class="game-icon">LAN</div>
+						<div class="game-info">
+							<h2>LA Noire</h2>
+							<div class="game-year">2011</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+						<!-- Official Teaser Site October 2006 -->
+						<div class="website-card" data-year="2006" data-categories="la noire teaser">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/lanoire-2006-10.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/lanoire/2006-10/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<span class="card-dev">INCOMPLETE</span>
+							<div class="website-info">
+								<h3> Official Teaser Site October 2006</h3>
+								<p>An Incomplete archive of the original teaser website for LA Noire from October 2006.</p>
+								<span class="category-tag">Teaser</span>
+								<div class="website-meta">
+									<span class="website-type">Official Site</span>
+									<span class="website-year">2006</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Max Payne 3 -->
+				<section class="game-section" data-game="maxpayne3">
+					<div class="game-header">
+						<div class="game-icon">MP3</div>
+						<div class="game-info">
+							<h2>Max Payne 3</h2>
+							<div class="game-year">2012</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+						<!-- Official Teaser Site Febuary 2011 -->
+						<div class="website-card" data-year="2011" data-categories="max payne 3 teaser">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/maxpayne3.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/maxpayne3/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3>Official Teaser Site Febuary 2011</h3>
+								<p>The original teaser website for Max Payne 3 from Febuary 2011.</p>
+								<span class="category-tag">Teaser</span>
+								<div class="website-meta">
+									<span class="website-type">Official Site</span>
+									<span class="website-year">2011</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+				<!-- Grand Theft Auto V -->
+				<section class="game-section" data-game="gta">
+					<div class="game-header">
+						<div class="game-icon">V</div>
+						<div class="game-info">
+							<h2>Grand Theft Auto V</h2>
+							<div class="game-year">2013</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+						<!-- LifeInvader (Recreation)-->
+						<div class="website-card" data-year="2013" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/lifeinvaderlogo.webp');">
+								<div class="website-overlay">
+									<a href="lifeinvader.com" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> LifeInvader (Recreation)</h3>
+								<p>Social media network parody website featuring profiles and posts.</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Social Media</span>
+									<span class="website-year">2013</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Cult Stoppers -->
+						<div class="website-card" data-year="2013" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/cultstopperslogo.webp');">
+								<div class="website-overlay">
+									<a href="cultstoppers.com" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3> Cult Stoppers</h3>
+								<p>Anti-cult organization website exposing dangerous groups and providing resources.</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Organization</span>
+									<span class="website-year">2013</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Grand Theft Auto V: Recovered Website Videos -->
+						<div class="website-card" data-year="2013" data-categories="gta v official site">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/grand-theft-auto-v-web-videos.webp');">
+								<div class="website-overlay">
+									<a href="_resources/grand-theft-auto-v-web-videos/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Grand Theft Auto V: Recovered Website Videos</h3>
+								<p>This page contains archived videos from the now deleted Grand Theft Auto V website.
+								</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Videos</span>
+									<span class="website-year">2013</span>
+								</div>
+							</div>
+						</div>						
+
+						<!-- EpsilonismToday -->
+						<div class="website-card" data-year="2013" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/epsilonismtoday.webp');">
+								<div class="website-overlay">
+									<a href="_resources/twitter/@EpsilonismToday/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> EpsilonismToday</h3>
+								<p>Twitter mockup displaying all posts from the @EpsilonismToday promotional account.
+								</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Social Media</span>
+									<span class="website-year">2013</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Epsilon Program Screensaver -->
+						<div class="website-card" data-year="2013" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/epsilon-screensaver.webp');">
+								<div class="website-overlay">
+									<a href="_resources/epsilon-program-screensaver/EpsilonProgramScreensaver.zip"
+										class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Epsilon Program Screensaver</h3>
+								<p>Download the official Epsilon Program Screensaver.
+								</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Media</span>
+									<span class="website-year">2013</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Epsilon Program 2012-09-19 -->
+						<div class="website-card" data-year="2013" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/Epsilonprogram.com-2012-09-19.webp');">
+								<div class="website-overlay">
+									<a href="epsilonprogram.com/2012-09-19/index.htm" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Epsilon Program 2012-09-19</h3>
+								<p>The Epsilon Program Website updated with a Twitter link for GTA V Promotion.
+								</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Organization</span>
+									<span class="website-year">2012</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Epsilon Program 2013-04-08 -->
+						<div class="website-card" data-year="2013" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/Epsilonprogram.com-2013-04-08.webp');">
+								<div class="website-overlay">
+									<a href="epsilonprogram.com/2013-04-08/index.htm" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Epsilon Program 2013-04-08</h3>
+								<p>The Epsilon Program Website updated with a Screensaver download link for GTA V
+									Promotion.
+								</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Organization</span>
+									<span class="website-year">2013</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Epsilon Program 2013-04-29 -->
+						<div class="website-card" data-year="2013" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/Epsilonprogram.com-2013-04-29.webp');">
+								<div class="website-overlay">
+									<a href="epsilonprogram.com/2013-04-29/index.htm" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Epsilon Program 2013-04-29</h3>
+								<p>The Epsilon Program Website featuring a contest.
+								</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Organization</span>
+									<span class="website-year">2013</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Epsilon Program 2013-05-29 -->
+						<div class="website-card" data-year="2013" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/Epsilonprogram.com-2013-05-29.webp');">
+								<div class="website-overlay">
+									<a href="epsilonprogram.com/2013-05-29/index.htm" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Epsilon Program 2013-05-29</h3>
+								<p>The Epsilon Program Website announcing the contest has ended.
+								</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Organization</span>
+									<span class="website-year">2013</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Epsilon Program 2013-08-06 -->
+						<div class="website-card" data-year="2013" data-categories="gta in-universe">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/Epsilonprogram.com-2013-08-06.webp');">
+								<div class="website-overlay">
+									<a href="epsilonprogram.com/2013-08-06/index.htm" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Epsilon Program 2013-08-06</h3>
+								<p>The Epsilon Program Website announcing the winners have been choosen.
+								</p>
+								<span class="category-tag">In-Universe</span>
+								<div class="website-meta">
+									<span class="website-type">Organization</span>
+									<span class="website-year">2013</span>
+								</div>
+							</div>
+						</div>
+					  </div>
+				</section>
+
+
+				<!-- Grand Theft Auto VI -->
+				<section class="game-section" data-game="gta">
+					<div class="game-header">
+						<div class="game-icon">VI</div>
+						<div class="game-info">
+							<h2>Grand Theft Auto VI</h2>
+							<div class="game-year">2025</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+						<div class="website-card" data-year="2023" data-categories="gta official">
+
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/VI-V1.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/VI/V1" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<span class="card-dev">INCOMPLETE</span>
+							<div class="website-info">
+								<h3></i> Official Website V1</h3>
+								<p>Initial trailer announcement website for GTA VI featuring reveal content and
+									information.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Primary</span>
+									<span class="website-year">2023</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Franchise Landing Pages -->
+				<section class="game-section" data-game="franchise">
+					<div class="game-header">
+						<div class="game-icon">FLP</div>
+						<div class="game-info">
+							<h2>Franchise Landing Pages</h2>
+							<div class="game-year">2007-2017</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+
+						<!-- Smuggler's Run 2002 -->
+						<div class="website-card" data-year="2007" data-categories="midnightclub official">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/smugglersrun.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com\smugglersrun" class="view-btn">View
+										Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Smuggler's Run 2002</h3>
+								<p>Franchise landing page from 2002 featuring links to all game sites.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Landing Page</span>
+									<span class="website-year">2002</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Midnight Club 2007 -->
+						<div class="website-card" data-year="2007" data-categories="midnightclub official">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/mdlp2007.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com\midnightclub\2007-03-06" class="view-btn">View
+										Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> Midnight Club 2007</h3>
+								<p>Franchise landing page from March 2007 featuring series information and news.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Landing Page</span>
+									<span class="website-year">2007</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Midnight Club 2011 -->
+						<div class="website-card" data-year="2011" data-categories="midnightclub official">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/mdlp2011.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com\midnightclub\2011-05-00" class="view-btn">View
+										Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> Midnight Club 2011</h3>
+								<p>Updated landing page from May 2011 with refreshed design and content.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Landing Page</span>
+									<span class="website-year">2011</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Grand Theft Auto August 2003-->
+						<div class="website-card" data-year="2003" data-categories="gta">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/gtaf2003.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com\grandtheftauto\2003-08" class="view-btn">View
+										Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> Grand Theft Auto August 2003</h3>
+								<p>Grand Theft Auto Landing Page from August 2003 featuring GTA 1, GTA London, GTA 2, GTA 3 and GTA VC.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Landing Page</span>
+									<span class="website-year">2003</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Grand Theft Auto August 2004-->
+						<div class="website-card" data-year="2004" data-categories="gta">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/gtaf2004.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com\grandtheftauto\2004-08" class="view-btn">View
+										Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> Grand Theft Auto August 2004</h3>
+								<p>Updated Grand Theft Auto Landing Page from August 2004 now also featuring Grand Theft Auto Double Pack and the GTA SA Preorders.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Landing Page</span>
+									<span class="website-year">2004</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Grand Theft Auto July 2005-->
+						<div class="website-card" data-year="2005" data-categories="gta">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/gtaf2005.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com\grandtheftauto\2005-07" class="view-btn">View
+										Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> Grand Theft Auto July 2005</h3>
+								<p>Updated Grand Theft Auto Landing Page from July 2005 now featuring GTA SA for PS2, XBOX and PC and GTA Advance.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Landing Page</span>
+									<span class="website-year">2005</span>
+								</div>
+							</div>
+						</div>						
+
+						<!-- Grand Theft Auto September 09, 2005-->
+						<div class="website-card" data-year="2005" data-categories="gta">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/gtafsep2005.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com\grandtheftauto\2005-09-09" class="view-btn">View
+										Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> Grand Theft Auto September 09, 2005</h3>
+								<p>New Flash based Grand Theft Auto Landing Page from September 09, 2005 now featuring GTA LCS Coming October 2005.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Landing Page</span>
+									<span class="website-year">2005</span>
+								</div>
+							</div>
+						</div>		
+
+						<!-- Grand Theft Auto July 14, 2006-->
+						<div class="website-card" data-year="2006" data-categories="gta">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/gtafjul2006.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com\grandtheftauto\2006-07-14" class="view-btn">View
+										Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> Grand Theft Auto July 14, 2006</h3>
+								<p>Updated Grand Theft Auto Landing Page from July 14, 2006 now featuring GTA VCS Coming October 2006 and GTA IV Coming October 2007.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Landing Page</span>
+									<span class="website-year">2006</span>
+								</div>
+							</div>
+						</div>		
+
+						<!-- Grand Theft Auto October 31, 2006-->
+						<div class="website-card" data-year="2006" data-categories="gta">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/gtafoct2006.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com\grandtheftauto\2006-10-31" class="view-btn">View
+										Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> Grand Theft Auto October 31, 2006</h3>
+								<p>Updated Grand Theft Auto Landing Page from October 31, 2006 after GTA VCS released.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Landing Page</span>
+									<span class="website-year">2006</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Grand Theft Auto Mai 2011-->
+						<div class="website-card" data-year="2011" data-categories="gta">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/gtaf05-2011.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com\grandtheftauto\2011-05" class="view-btn">View
+										Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> Grand Theft Auto Mai 2011</h3>
+								<p>Redesigned Grand Theft Auto Landing Page from Mai 2011 now also featuring GTA IV, GTA TLAD, GTA CW, GTA TBOGT and GTA EFLC.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Landing Page</span>
+									<span class="website-year">2011</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Grand Theft Auto January 3, 2012-->
+						<div class="website-card" data-year="2012" data-categories="gta">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/gtafjan2012.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com\grandtheftauto\2012-01-03" class="view-btn">View
+										Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> Grand Theft Auto January 3, 2012</h3>
+								<p>Updated Grand Theft Auto Landing Page from January 3, 2012 now also featuring GTA V Coming Soon.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Landing Page</span>
+									<span class="website-year">2012</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Grand Theft Auto January 3, 2013-->
+						<div class="website-card" data-year="2013" data-categories="gta">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/gtafjan2013.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com\grandtheftauto\2013-01-03" class="view-btn">View
+										Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> Grand Theft Auto January 3, 2013</h3>
+								<p>Updated Grand Theft Auto Landing Page from January 3, 2013 now featuring GTA V Spring 2013.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Landing Page</span>
+									<span class="website-year">2013</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Grand Theft Auto January 31, 2013-->
+						<div class="website-card" data-year="2013" data-categories="gta">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/gtaf31jan2013.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com\grandtheftauto\2013-01-31" class="view-btn">View
+										Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> Grand Theft Auto January 31, 2013</h3>
+								<p>Updated Grand Theft Auto Landing Page from January 31, 2013 now featuring GTA V September 2013.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Landing Page</span>
+									<span class="website-year">2013</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Grand Theft Auto March 28, 2017-->
+						<div class="website-card" data-year="2017" data-categories="gta">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/gtaf2017.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com\grandtheftauto\2017-03-28" class="view-btn">View
+										Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> Grand Theft Auto March 28, 2017</h3>
+								<p>Updated Grand Theft Auto Landing Page from March 28, 2017 now featuring GTA V Now Avialable for PC, PlayStation 4, Xbox One, PlayStation 3 and Xbox 360.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Landing Page</span>
+									<span class="website-year">2017</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="game-section" data-game="misc">
+					<div class="game-header">
+						<div class="game-icon">M</div>
+						<div class="game-info">
+							<h2>Studios</h2>
+							<div class="game-year">1999-2011</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+
+						<!-- Rockstar Website 2000-->
+						<div class="website-card" data-year="2000" data-categories="official">
+
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/rockstar05112000.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/2000-05-11/front.html" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<span class="card-dev">INCOMPLETE</span>
+							<div class="website-info">
+								<h3></i> Rockstar Games 2000</h3>
+								<p>Partial archive of Rockstar Games main website from May 11, 2000.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Corporate</span>
+									<span class="website-year">2000</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Rockstar Website 2001-->
+						<div class="website-card" data-year="2000" data-categories="official">
+
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/rockstar02092001.webp');">
+								<div class="website-overlay">
+									<a href="_resources/flash-loader.html?LOADSWFhttps://rockstar-archive.h0rizon.dev/webarchive/rockstargames.com/2001-09-02/basecontrol.swf"
+										class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<span class="card-dev">INCOMPLETE</span>
+							<div class="website-info">
+								<h3></i> Rockstar Games 2001</h3>
+								<p>Archive of the basecontrol.swf for Rockstar Games main website from Sep 09, 2001.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Corporate</span>
+									<span class="website-year">2001</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Angelstudios Website Midnight Club -->
+						<div class="website-card" data-year="2000" data-categories="midnightclub official">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/angelstudio-mc.webp');">
+								<div class="website-overlay">
+									<a href="angelstudios.com/mc.html" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<span class="card-dev">INCOMPLETE</span>
+							<div class="website-info">
+								<h3></i> Angel Studios Page</h3>
+								<p>Developer's game page featuring early Midnight Club racing game information and
+									media.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Developer</span>
+									<span class="website-year">2000</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Rockstar Vienna Website 2005-->
+						<div class="website-card" data-year="2000" data-categories="official">
+
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/rockstarvienna.webp');">
+								<div class="website-overlay">
+									<a href="rockstarvienna.com/2005-02/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> Rockstar Vienna 2005</h3>
+								<p>Archive of the Rockstar Vienna website from Feb, 2005.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Corporate</span>
+									<span class="website-year">2005</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Mad Doc Software Website April 2008-->
+						<div class="website-card" data-year="2008" data-categories="official">
+
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/maddocsoftware.webp');">
+								<div class="website-overlay">
+									<a href="maddocsoftware.com/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Mad Doc Software (Rockstar New England) April 2008</h3>
+								<p>The Official Mad Doc Software website from April 2008.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Developer</span>
+									<span class="website-year">2008</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Rockstar San Diego Website April 2008-->
+						<div class="website-card" data-year="2008" data-categories="official">
+
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/sandiego2008.webp');">
+								<div class="website-overlay">
+									<a href="rockstarsandiego.com/2008-04/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Rockstar San Diego April 2008</h3>
+								<p>The Official Rockstar San Diego website from April 2008.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Developer</span>
+									<span class="website-year">2008</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Rockstar San Diego Website August 2009-->
+						<div class="website-card" data-year="2009" data-categories="official">
+
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/sandiego2009.webp');">
+								<div class="website-overlay">
+									<a href="rockstarsandiego.com/2009-08/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Rockstar San Diego August 2009</h3>
+								<p>The Official Rockstar San Diego website from August 2009.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Developer</span>
+									<span class="website-year">2009</span>
+								</div>
+							</div>
+						</div>						
+
+						<!-- Rockstar North Website November 2008-->
+						<div class="website-card" data-year="2008" data-categories="official">
+
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/rockstarnorth2008.webp');">
+								<div class="website-overlay">
+									<a href="rockstarnorth.com/2008-11-02/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Rockstar North Flash Site 2008</h3>
+								<p>Rockstar North interactive Flash site from November 2 2008, featuring extensive content to explore, including renders and concept art from Rockstar’s early games.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Developer</span>
+									<span class="website-year">2008</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Rockstar North Website May 2011-->
+						<div class="website-card" data-year="2011" data-categories="official">
+
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/rockstarnorth2011.webp');">
+								<div class="website-overlay">
+									<a href="rockstarnorth.com/2011-05/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Rockstar North Flash Site 2011</h3>
+								<p>Rockstar North interactive Flash site from May 2011, featuring extensive content to explore, including renders and concept art from Rockstar’s early games.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Developer</span>
+									<span class="website-year">2011</span>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Rockstar London Website December 2009-->
+						<div class="website-card" data-year="2009" data-categories="official">
+
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/rockstarlondon.webp');">
+								<div class="website-overlay">
+									<a href="rockstarlondon.com" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Rockstar London Website 2009</h3>
+								<p>Rockstar London Website from December 2009.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Developer</span>
+									<span class="website-year">2009</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Rockstar Leeds Website May 2011-->
+						<div class="website-card" data-year="2011" data-categories="official">
+
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/rockstarleeds.webp');">
+								<div class="website-overlay">
+									<a href="rockstarleeds.com" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Rockstar Leeds Website 2011</h3>
+								<p>Rockstar Leeds Website from May 2011.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Developer</span>
+									<span class="website-year">2011</span>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Rockstar Lincoln Website May 2011-->
+						<div class="website-card" data-year="2011" data-categories="official">
+
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/rockstarlincoln.webp');">
+								<div class="website-overlay">
+									<a href="rockstarlincoln.com" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Rockstar Lincoln Website 2011</h3>
+								<p>Rockstar Lincoln Website from May 2011.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Developer</span>
+									<span class="website-year">2011</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Rockstar Vancouver Website May 2011-->
+						<div class="website-card" data-year="2011" data-categories="official">
+
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/rockstarvancouver.webp');">
+								<div class="website-overlay">
+									<a href="rockstarvancouver.com" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Rockstar Vancouver Website 2011</h3>
+								<p>Rockstar Vancouver Website from May 2011.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Developer</span>
+									<span class="website-year">2011</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Rockstar New England Website May 2011 -->
+						<div class="website-card" data-year="2011" data-categories="official">
+
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/rockstarnewengland.webp');">
+								<div class="website-overlay">
+									<a href="rockstarnewengland.com" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Rockstar New England Website 2011</h3>
+								<p>Rockstar New England Website from May 2011.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Developer</span>
+									<span class="website-year">2011</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Rockstar Toronto Website May 2011 -->
+						<div class="website-card" data-year="2011" data-categories="official">
+
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/rockstartoronto.webp');">
+								<div class="website-overlay">
+									<a href="rockstartoronto.com" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Rockstar Toronto Website 2011</h3>
+								<p>Rockstar Toronto Website from May 2011.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Developer</span>
+									<span class="website-year">2011</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Team Bondi Website Febuary 2011-->
+						<div class="website-card" data-year="2011" data-categories="official">
+
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/teambondi-02-2011.webp');">
+								<div class="website-overlay">
+									<a href="teambondi.com/2011-02/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Team Bondi Website Febuary 2011</h3>
+								<p>Team Bondi Website from Febuary 2011 also includes older news and job offers.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Developer</span>
+									<span class="website-year">2011</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Team Bondi Website May 2011-->
+						<div class="website-card" data-year="2011" data-categories="official">
+
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/teambondi-05-2011.webp');">
+								<div class="website-overlay">
+									<a href="teambondi.com/2011-05/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Team Bondi Website May 2011</h3>
+								<p>Team Bondi Website from May 2011 after the release of LA Noire contains reviews.</p>
+								<span class="category-tag">Official Site</span>
+								<div class="website-meta">
+									<span class="website-type">Developer</span>
+									<span class="website-year">2011</span>
+								</div>
+							</div>
+						</div>						
+					</div>
+				</section>
+
+				<!-- Miscellaneous -->
+				<section class="game-section" data-game="misc">
+					<div class="game-header">
+						<div class="game-icon">Misc</div>
+						<div class="game-info">
+							<h2>Miscellaneous</h2>
+							<div class="game-year">2000-2005</div>
+						</div>
+					</div>
+					<div class="websites-grid">
+						<!-- Rockstar Classics 2003-06 -->
+						<div class="website-card" data-year="2003" data-categories="promotional">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/rockstarclassiclogo.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/classics/2003-06/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> Rockstar Games Classics Volume 1</h3>
+								<p>Rockstar Games Classics Volume 1 collection website from June 2003 featuring GTA 1.
+								</p>
+								<span class="category-tag">Promotional</span>
+								<div class="website-meta">
+									<span class="website-type">Collection</span>
+									<span class="website-year">2003</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Rockstar Classics 2004-02 -->
+						<div class="website-card" data-year="2003" data-categories="promotional">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/rockstarclassiclogov2.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/classics/2004-02/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> Rockstar Games Classics Volume 2</h3>
+								<p>Rockstar Games Classics Volume 2 collection website from Febuary 2004 featuring GTA 1
+									and Wild Metal.</p>
+								<span class="category-tag">Promotional</span>
+								<div class="website-meta">
+									<span class="website-type">Collection</span>
+									<span class="website-year">2004</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Rockstar Classics V3 -->
+						<div class="website-card" data-year="2005" data-categories="promotional">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/rockstarclassiclogov3.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/classics/2005-01/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Rockstar Games Classics Volume 3</h3>
+								<p>Rockstar Games Classics Volume 3 collection website from January 2005 featuring GTA
+									1, GTA 2 and Wild Metal.</p>
+								<span class="category-tag">Promotional</span>
+								<div class="website-meta">
+									<span class="website-type">Collection</span>
+									<span class="website-year">2005</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Hornet Inc -->
+						<div class="website-card" data-year="2003" data-categories="thirdparty">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/hornetinc.webp');">
+								<div class="website-overlay">
+									<a href="hornetinc.com/index2.html" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i> Hornet Inc</h3>
+								<p>Third-party contractor website featuring Midnight Club 2 renders and artwork.</p>
+								<span class="category-tag">Third Party</span>
+								<div class="website-meta">
+									<span class="website-type">Contractor</span>
+									<span class="website-year">2003</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Upload 4 Contest -->
+						<div class="website-card" data-year="2005" data-categories="Contest">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/upload4.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/upload/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Upload 4 Contest</h3>
+								<p>Archive of the website for the forth Rockstar Games Upload Contest from 2005.</p>
+								<span class="category-tag">Contest</span>
+								<div class="website-meta">
+									<span class="website-type">Contest</span>
+									<span class="website-year">2005</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Sunday Driver (Movie) -->
+						<div class="website-card" data-year="2005" data-categories="Movie">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/sundaydriver.webp');">
+								<div class="website-overlay">
+									<a href="rockstargames.com/sundaydriver/" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Sunday Driver Website</h3>
+								<p>Promotional website for the 2005 documentary film Sunday Driver by Rockstar Games.</p>
+								<span class="category-tag">Promotional</span>
+								<div class="website-meta">
+									<span class="website-type">Movie</span>
+									<span class="website-year">2005</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Obbe Vermeij Development Blog -->
+						<div class="website-card" data-year="2023" data-categories="Blog">
+							<div class="website-preview"
+								style="background-image: url('_resources/webarchive/thumbs/insiderockstarnorth.webp');">
+								<div class="website-overlay">
+									<a href="_resources/insiderockstarnorth" class="view-btn">View Archive</a>
+								</div>
+							</div>
+							<div class="website-info">
+								<h3></i>Obbe Vermeij Development Blog</h3>
+								<p>An archive of the now removed Development Blog by Obbe Vermeij.</p>
+								<span class="category-tag">Third Party</span>
+								<div class="website-meta">
+									<span class="website-type">Blog</span>
+									<span class="website-year">2023</span>
+								</div>
+							</div>
+						</div>						
+					</div>
+				</section>
+
+			</div>
+			<div class="content-footer">
+				<div class="credit">
+					<p><i class="fa fa-code"></i> programmed by greensci / franklin_clinton <span class="year">©
+							2025</span></p>
+				</div>
+				<br>
+			</div>
+		</div>
+		<div class="bottom"></div>
+		</div>
+		</section>
+		</div>
+
+	</main>
+
+
+	<footer>
+		<div class="footer-content">
+			<p class="disclaimer">
+				This website is not affiliated with Take-Two Interactive or any of its subsidiaries. All trademarks and
+				copyrights related to the content on this site are owned by Take-Two Interactive or their respective
+				owners.<br>
+				This website is an independent fan project intended for archival and educational purposes.<br>
+				We do not support or condone piracy in any form.<br>
+				If you believe that any content on this website infringes your copyright, please contact us at
+				<strong><i>gtaarchiveteam@proton.me</i></strong>, and
+				we will take immediate action to remove the material in question. <br><i>All rights reserved by Take-Two
+					Interactive.</i>
+			</p>
+		</div>
+	</footer>
+</body>
+
+<script>
+function fitTextToBox(el, minSize = 10, maxSize = 18) {
+    let size = maxSize;
+    el.style.whiteSpace = 'nowrap';
+
+    while (size > minSize) {
+        el.style.fontSize = size + 'px';
+        if (el.scrollWidth <= el.clientWidth) break;
+        size--;
+    }
+}
+
+document.querySelectorAll('.game-icon').forEach(icon => {
+    fitTextToBox(icon);
+});
+</script>
+
+</html>

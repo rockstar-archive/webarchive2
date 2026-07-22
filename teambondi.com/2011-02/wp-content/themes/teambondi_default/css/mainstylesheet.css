@@ -1,0 +1,279 @@
+/* CSS Document */
+/* Team Bondi CSS Stylesheet 'Screen' - Version 1.0 */
+/* All associated graphics, Copyright 2006 Team Bondi Pty. Ltd */
+/* Site: http://www.teambondi.com */
+/* Created by: Hami (domains@teambondi.com) */
+/* Created: 25/09/2006 */
+/* Last Modified: 05/10/2006 */
+
+/* BASIC PAGE ELEMENTS ----------------------------------------------------------------------------------- */
+
+body {
+	background: url(../img/background.jpg) repeat-x;
+	background-attachment: fixed;
+	background-color: #f1eee9;
+}
+
+#wrap, #footerText {
+	width: 709px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#logo {
+	background: url(../img/teambondi_logo.png) no-repeat;
+	height: 67px;
+	width: 100%;
+}
+
+a {	outline: none; }
+a img {	border: none; }
+
+#pageContent, #pageBase, #mainMenu, #footerBackground { width: 100%; }
+#maintenance {margin: 125px 0 0 0; min-height: 400px; text-align: center;}
+
+#pictureArea { background: url(../img/page_top.png) no-repeat; margin: 10px 0 0 2px; padding: 0; height: 224px; }
+#topPicture { float: left; background: url(../img/toppictures/picture_01.jpg) no-repeat; margin: 7px 8px 8px 8px; width: 688px; height: 217px; }
+
+#mainMenu { background: url(../img/page_controls.png) no-repeat; height: 57px; }
+
+#pageContent { background: url(../img/page_middle.png) repeat-y; margin: 0 0 0 2px; padding: 0 0 2em 0; }
+.postFoot, #pageContentBase { width: 100%; }
+#pageContentBase { height: 30px; }
+#pageContentBase, #pageBase, #pageContentSpacer { clear: both; }
+
+#jobsBadge { position: absolute; float: left; margin: -50px 0 0 -59px; width: 90px; height: 104px; background: url(../img/badges/badge_01.png) no-repeat; }
+
+#pageBase { background: url(../img/page_bottom.png) no-repeat; height: 185px; padding: 1.3em; }
+
+#pageBase .left { width: 280px; }
+#pageBase .middle { width: 100px; }
+#pageBase .right { width: 256px; }
+.pageBaseBlock { float:left; margin:20px 0 0 5px; height: 130px; }
+
+#newestJobs, #pageBaseLeft, #pageBaseCenter, #pageBaseRight { min-height: 100px; }
+
+#columnLeftMajor, #columnRightMinor, #columnFull { min-height: 164px; }
+#columnLeftMajor, #columnLeftMajorBase { float: left; margin: 5px 0 0 25px; width: 416px; }
+#columnRightMinor, #columnRightMinorBase { float: right; margin: 5px 25px 0 0; width: 216px; }
+#columnFullPage, #columnLeftFullBase { margin: 0 25px 0 25px; width: 646px;}
+
+#recentlyPosted { min-height: 130px; }
+
+#footer { background: url(../img/background_footer.jpg) repeat-x; left: 0;  bottom: 0; position: fixed; width: 100%; height: 60px; }
+#footerText { position: relative; margin-left: auto; margin-right:auto; }
+#footerSpacer { height: 16px; }
+
+#search { padding: 0.5em 0 0 0; }
+.searchBox, .searchBoxSafari { width: 216px; border: 1px solid #aaa; }
+.searchBox { margin: 0 0 9px 0; }
+.searchBoxSafari { padding: 0; margin: -2px 0 -10px 0; }
+
+#sandoverlap { float: right; background: transparent; position: fixed; margin-left: auto; margin-right: auto; width: 100%; height: 20px; }
+#sandoverlapImage { background: url(../img/sandoverlap.png) no-repeat; position: relative; margin: -19px auto 0 auto; height: 19px; width: 797px; }
+
+#googleearthWrap { border: 1px solid #aaa; padding: 2px; width: 207px; }
+#googleearth { background: url(../img/googleearth.jpg) no-repeat; width: 207px; height: 111px; margin: 0; padding: 0; }
+#googleearth a { display: block; width: 203px; height: 108px; border: none;}
+#googleearth a:hover, #googleearth a:active { border-bottom: 4px solid #007EC0; width: 207px; }
+
+#teambondiLogoEnamel { margin: 40px 0 0 20px; background: url(../img/teambondi_logo_enamel.jpg) no-repeat; height: 133px; width: 160px; }
+#teambondiLogoMaintenance { margin: 40px 0 40px 229px; background: url(../img/teambondi_logo_colour.gif) no-repeat; height: 208px; width: 250px; }
+
+#la-noire { background: url(../img/projectlogos/la-noire.jpg) no-repeat; height: 63px; width: 216px; padding: 0 0 1.5em 0;}
+#la-noireBig { background: url(../img/projectlogos/la-noire_big.gif) no-repeat; height: 136px; width: 645px; padding: 0 0 1.5em 0;}
+#block-la-noire { background: url(../img/blocks/block_la-noire.png) no-repeat; height: 182px; width: 288px; margin: -36px 0 0 3px;}
+#block-la-noire a { display: block; height: 182px; width: 288px; }
+
+#publisherInfo, #platformInfo { float: left; padding: 0 2em 0 0;}
+#projectOverview { float: right; }
+
+#rockstarLogo { background: url(../img/rockstar_logo.gif) no-repeat; height: 74px; width: 80px; }
+
+#feedicon { float: left; margin: 0 8px 0 0; background: url(../img/feed_icon.gif) no-repeat; height: 16px; width: 16px; }
+
+.line { border-bottom: 1px solid #dedede; padding: 0.2em 0 0.2em 0; }
+
+.hiddenText { display: none; }
+
+.emailFooter { text-align: center; background-color: #E2F0F8; border: 1px solid #007EC0; padding: 1em;}
+
+/* ----------------------------------------------------------------------------------------------------- */
+
+/* MAIN MENU ----------------------------------------------------------------------------------- */
+
+#mainMenuButtons {
+	margin: 0 0 0 10px;
+	padding: 0;
+	position: relative;
+	height: 39px;
+	width: 687px;
+}
+
+#mainMenuButtons li { 
+	margin: -7px 0 0 0;
+	padding: 0;
+	display: block;
+	float: left;
+	list-style-image: none;
+	list-style-type: none;
+}
+
+#mainMenuButtons li a {
+	display:block;
+	height:39px;
+	overflow: hidden;
+	font-size: 1px;
+	color: white;
+	text-indent:-10000em;
+	text-decoration: none;
+	padding: 0;
+}
+
+#mainMenuButtons #newsButton {background: transparent url(../img/mainmenu/news.gif); width:54px;} 										
+#newsButton a:hover {background: url(../img/mainmenu/news.gif) 0 -39px; border-bottom: 0px;}								
+#newsButton a, #newsButtonActive a {border-bottom: 0px; width:54px;}
+#mainMenuButtons #newsButtonActive {background: transparent url(../img/mainmenu/news.gif) 0 -78px no-repeat; width:54px;}
+
+#mainMenuButtons #aboutButton {background: transparent url(../img/mainmenu/about.gif); width:59px;} 										
+#aboutButton a:hover {background: url(../img/mainmenu/about.gif) 0 -39px; border-bottom: 0px;}								
+#aboutButton a, #aboutButtonActive a {border-bottom: 0px; width:59px;}
+#mainMenuButtons #aboutButtonActive {background: transparent url(../img/mainmenu/about.gif) 0 -78px no-repeat; width:59px;}
+
+#mainMenuButtons #projectsButton {background: transparent url(../img/mainmenu/projects.gif); width:73px;} 										
+#projectsButton a:hover {background: url(../img/mainmenu/projects.gif) 0 -39px; border-bottom: 0px;}								
+#projectsButton a, #projectsButtonActive a {border-bottom: 0px; width:73px;}
+#mainMenuButtons #projectsButtonActive {background: transparent url(../img/mainmenu/projects.gif) 0 -78px no-repeat; width:73px;}
+
+#mainMenuButtons #jobsButton {background: transparent url(../img/mainmenu/jobs.gif); width:47px;} 										
+#jobsButton a:hover {background: url(../img/mainmenu/jobs.gif) 0 -39px; border-bottom: 0px;}								
+#jobsButton a, #jobsButtonActive a {border-bottom: 0px; width:47px;}
+#mainMenuButtons #jobsButtonActive {background: transparent url(../img/mainmenu/jobs.gif) 0 -78px no-repeat; width:47px;}
+
+#mainMenuButtons #contactButton {background: transparent url(../img/mainmenu/contact.gif); width:70px;} 										
+#contactButton a:hover {background: url(../img/mainmenu/contact.gif) 0 -39px; border-bottom: 0px;}								
+#contactButton a, #contactButtonActive a {border-bottom: 0px; width:70px;}
+#mainMenuButtons #contactButtonActive {background: transparent url(../img/mainmenu/contact.gif) 0 -78px no-repeat; width:70px;}
+
+/* ----------------------------------------------------------------------------------------------------- */
+
+/* BASIC TYPE COLOURS ----------------------------------------------------------------------------------- */
+
+.bodyCopy, .bodyCopyItalic, h1, h1 a:link, h1 a:visited 
+{ color: #000; }
+
+h1 a:hover, h1 a:active 
+{ color: #007EC0; }
+
+.bodyCopyItalicGrey a:link, .bodyCopyItalicGrey a:visited, .bodyCopyItalicGrey,
+.postFootLeft, .postFootRight, .postFootLeft a:link, .postFootLeft a:visited, .postFootRight a:link, .postFootRight a:visited, 
+.recentlyDate, .jobDate, .searchDate
+{ color: #aaa; }
+
+.bodyCopy a:link, .bodyCopy a:visited, .bodyCopyItalic a:link, .bodyCopyItalic a:visited, 
+.recentPosts a:link, .recentPosts a:visited, .jobsNew a:link, .jobsNew a:visited, .postDate, .postAuthor, .textGrey
+{ color: #666; }
+
+#maintenance h1, .footerCopyright, .footerRight, .footerCopyright a:link, .footerCopyright a:visited,
+.footerRight a:link, .footerRight a:visited 
+{ color: #aba594; }
+
+.footerCopyright a:hover, .footerCopyright a:active,
+.footerRight a:hover, .footerRight a:active 
+{ color: #534d3d }
+
+.bodyCopy a:hover, .bodyCopy a:active, .bodyCopyItalic a:hover, .bodyCopyItalic a:active, 
+.bodyCopyItalicGrey a:hover, .bodyCopyItalicGrey a:active,
+.postFootLeft a:hover, .postFootLeft a:active, .postFootRight a:hover, 
+.postFootRight a:active, ul.recentPosts a:hover, 
+ul.recentPosts a:active, ul.jobsNew a:hover, 
+ul.jobsNew a:active  
+{ color: #007EC0; }
+
+.errorText 
+{ color: #FF1913; background-color: #FFCDCD; padding: 0 2px 0 2px;}
+
+.searchHighlight 
+{ color: #000000; background-color: #bee8f8; }
+
+/* ----------------------------------------------------------------------------------------------------- */
+
+/* BASIC TYPE ELEMENTS ----------------------------------------------------------------------------------- */
+
+h1 { 
+	font: 24px Georgia, "Times New Roman", Times, serif;
+ 	margin: 0;
+ 	padding: 0 0 0.4em 0;
+ 	text-transform: capitalize;
+}
+
+h2 { 
+	font: 18px Georgia, "Times New Roman", Times, serif;
+ 	margin: 0;
+ 	padding: 0 0 0.2em 0;
+ 	text-transform: capitalize;
+}
+
+h3 { 
+	font: 16px Georgia, "Times New Roman", Times, serif;
+ 	margin: 0;
+ 	padding: 0 0 0.1em 0;
+ 	text-transform: capitalize;
+}
+
+#columnRightMinor h3 { line-height: 2.1em; padding-bottom: 0.3em; }
+
+h1 a:link, h1 a:visited, h1 a:hover, h1 a:active { border: none; text-decoration: none; }
+
+.bodyCopy, .bodyCopyItalic, .postFootLeft, .postFootRight, .recentlyDate, .recentPosts, .jobsNew, .jobDate
+{ font: 12px Georgia, "Times New Roman", Times, serif; }
+
+.bodyCopyItalic, .bodyCopyItalicGrey { font-style: italic; }
+
+#mainMenu { font: 14px Georgia, "Times New Roman", Times, serif; }
+
+.recentlyDate, .jobDate, .searchDate { padding: 0 0.5em 0 0; }
+.recentPosts, .jobsNew, .searchResults { list-style: none; margin: 0; padding: 0; line-height: 1.4em; }
+.sideList { list-style-type: disc; margin: 14px; padding: 0;}
+
+ul.recentPosts a:link .recentlyHeadline, ul.recentPosts a:visited .recentlyHeadline,
+ul.jobsNew a:link, ul.jobsNew a:visited
+{ border-bottom: 1px dotted #666; text-decoration: none; }
+
+.recentPosts a:link, .recentPosts a:visited, .recentlyDate a:link, .recentlyDate a:visited, 
+.jobsNew a:link, .jobsNew a:visited, .jobDate a:link, .jobDate a:visited, .searchDate a:link, .searchDate a:visited 
+{ border: none; text-decoration: none; }
+
+.postFootLeft, .postFootRight { padding: 0.5em 0 0 0; }
+.postFootLeft { float: left; }
+.postFootRight { text-align: right; float: right; }
+
+.bodyCopy a:link, .bodyCopy a:visited, 
+.bodyCopyItalic a:link, .bodyCopyItalic a:visited, 
+.bodyCopyItalicGrey a:link, .bodyCopyItalicGrey a:visited,
+.postFootLeft a:link, .postFootLeft a:visited,
+.postFootRight a:link, .postFootRight a:visited
+{ border-bottom: 1px dotted #aaa; text-decoration: none; }
+
+.footerCopyright, .footerRight 
+{ float: left; position: absolute; font: 11px "Helvetica", "Arial", sans-serif; margin: 36px 0 0 0; }
+
+.footerRight { text-align: right; right: 0; }
+
+.errorText { padding: 0 2px 0 2px; }
+
+.footerCopyright a:link, .footerCopyright a:visited,
+.footerRight a:link, .footerRight a:visited 
+{ border-bottom: 1px dotted #aba594; text-decoration: none; }
+
+.bodyCopy a:hover, .bodyCopy a:active, .bodyCopyItalic a:hover, .bodyCopyItalic a:active, 
+.bodyCopyItalicGrey a:hover, .bodyCopyItalicGrey a:active,
+ul.recentPosts a:hover, ul.recentPosts a:active,
+ul.jobsNew a:hover, ul.jobsNew a:active,
+.footerCopyright a:hover, .footerCopyright a:active,
+.footerRight a:hover, .footerRight a:active,
+.postFootLeft a:hover, .postFootLeft a:active, 
+.postFootRight a:hover, .postFootRight a:active,
+ul.jobsNew a:hover .jobName, ul.jobsNew a:active .jobName,
+ul.recentPosts a:hover .recentlyHeadline, ul.recentPosts a:active .recentlyHeadline  
+{ border-bottom: none; text-decoration: none; }

@@ -1,0 +1,77 @@
+html, body {
+    background: black;
+   	position: absolute;
+    margin: 0;
+    padding: 0;
+   	height: 100%;
+	width: 100%;
+}
+
+#container { height: 100%; }
+body > #container { height: auto; min-height: 100%; }
+
+#content {
+	padding: 0 0 3.5em 0;
+}
+
+#clouds {
+    background: url('../img/clouds.jpg') no-repeat center top;
+	position: absolute;
+	overflow: auto;
+   	height: 554px;
+	width: 100%;
+}
+
+#neonsign, #anim {
+   	position: relative;
+    overflow:none;
+    margin: 0 auto 0 auto;
+    padding: 0;
+   	height: 554px;
+	width: 800px;
+}
+
+#contact-container {
+	width: 100%;
+	background: black;
+}
+
+#contact-content {
+   	position: relative;
+	overflow:none;
+	margin: 0 auto 0 auto;
+	padding: 0px 0px 15px 0;
+	width: 800px;
+	font: 12px "Helvetica", "Arial", sans-serif;
+	text-align: justify;
+	color: #666;
+}
+
+.title {
+	font: 24px "Helvetica", "Arial", sans-serif;
+	color: #999;
+}
+
+#footer{
+	clear: both;
+	position: relative;
+	z-index: 10;
+	height: 2.8em;
+	margin-top: -3.5em;
+}
+
+.footer {
+	font: 11px "Helvetica", "Arial", sans-serif;
+	text-align: center;
+	color: #555;	
+}
+
+a, a:visited {
+	text-decoration: none;
+	color: #888;
+}
+
+a:hover, a:active {
+	text-decoration: underline;
+	color: #bbb;
+}

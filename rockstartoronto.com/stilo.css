@@ -1,0 +1,101 @@
+
+.menu {
+	color: #000000;
+	font-size:11px;
+	font-family: Arial, Helvetica;
+	}
+
+a.menu:link,a.menu:visited,a.menu:active {
+	text-decoration: none;
+	}
+
+a.menu:hover {
+	color: #ff0000;
+	text-decoration: underline;
+	}
+
+.section {
+	font-family: Times New Roman, Times;
+	font-size: 11px;
+	color: #000000;
+	font-style: italic;
+	letter-spacing:2px;
+	}
+
+.item {
+	font-family: Arial, Helvetica;
+	font-size: 11px;
+	color: #000000;
+	}
+
+.gsection {
+	font-family: Times New Roman, Times;
+	font-size: 11px;
+	color: #ffffff;
+	font-style: italic;
+	letter-spacing:2px;
+	}
+	
+.gitem {
+	font-family: Arial, Helvetica;
+	font-size: 11px;
+	color: #ffffff;
+	}
+	
+a.gitem:link,a.gitem:visited,a.gitem:active {
+	color: #ff0000;
+	text-decoration: none;
+	}
+
+a.gitem:hover {
+	color: #ff0000;
+	text-decoration: underline;
+	}
+
+.jsection {
+	font-family: Times New Roman, Times;
+	font-size: 11px;
+	color: #ffffff;
+	font-style: italic;
+	letter-spacing:2px;
+	}
+
+.j2section {
+	font-family: Times New Roman, Times;
+	font-size: 11px;
+	color: #000000;
+	font-style: italic;
+	letter-spacing:2px;
+	}
+	
+.jitem {
+	font-family: Arial, Helvetica;
+	font-size: 11px;
+	color: #000000;
+	}
+	
+a.jitem:link,a.jitem:visited,a.jitem:active {
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: bold;
+	}
+
+a.jitem:hover {
+	color: #ffffff;
+	text-decoration: underline;
+	font-weight: bold;
+	}
+/*
+     FILE ARCHIVED ON 21:10:52 Sep 28, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 10:35:45 May 04, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  capture_cache.get: 0.514
+  load_resource: 44.219
+  PetaboxLoader3.datanode: 43.124
+*/
