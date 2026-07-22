@@ -1,2 +1,2 @@
 # webarchive2
-Slave
+Archive
